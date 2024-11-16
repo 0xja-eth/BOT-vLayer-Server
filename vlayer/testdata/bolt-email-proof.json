@@ -3,7 +3,7 @@
     "seal": {
       "verifierSelector": "0xdeafbeef",
       "seal": [
-        "0xa052faa82ce32a333ace6e0de400121bd28d69b93fb3eaf5926419c7601f14ee",
+        "0xe7146218708bc7dc24630a4504701422d7d5c744a49302295a2416ba31727311",
         "0x0000000000000000000000000000000000000000000000000000000000000000",
         "0x0000000000000000000000000000000000000000000000000000000000000000",
         "0x0000000000000000000000000000000000000000000000000000000000000000",
@@ -17,10 +17,10 @@
     "callGuestId": "0x9447c254a89d2bb5b69f9d4d648b40219714cc114f7339522d7412ab6765ee22",
     "length": 1024,
     "callAssumptions": {
-      "functionSelector": "0xf889fea9",
-      "proverContractAddress": "0x2d802d3f341d86ed7322102e7653d40c92299b1a",
-      "settleBlockNumber": 19765285,
-      "settleBlockHash": "0x852c3dadcbdcc59571068f7847c5a6d55b7d29f6d5003140d3b49b88ef264737"
+      "functionSelector": "0xeea5a2e0",
+      "proverContractAddress": "0x14a037b0977ae89b06de08a31ef8542be465fba2",
+      "settleBlockNumber": 19765333,
+      "settleBlockHash": "0x6313528c5197ae0b0b350d53dbc71e0dec5288569557a7722d83e6d9b1c77a1f"
     }
   },
   "Li <0xja.eth@gmail.com>",

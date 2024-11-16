@@ -54,7 +54,7 @@ app.post('/api/generate-proof/:email', upload.single('emlFile'), async (req: Req
       proverAbi: proverSpec.abi,
       functionName: 'main',
       chainId: chain.id,
-      args: [unverifiedEmail, `^.*?${email}.*?$`, '15 November 2024', '20:33', '20:44'],
+      args: [unverifiedEmail, `^.*?${email}.*?$`],
       // args: [unverifiedEmail, '^.*?0xja\\.eth@gmail\\.com.*?$', '15 November 2024', '20:33', '20:44'],
     });
 

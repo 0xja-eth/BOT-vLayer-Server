@@ -46,9 +46,9 @@ contract EmailProver is Prover, Ownable {
         string[] memory captures = email.body.capture("^[\\s\\S]*&#44; (\\d{1,2} (January|February|March|April|May|June|July|August|September|October|November|December) \\d{4})<\\/span>[\\s\\S]*<span>Pickup:<\\/span>[\\s\\S]*?<span[^>]*>([\\d:]+)<\\/span>[\\s\\S]*?<span>Dropoff:<\\/span>[\\s\\S]*?<span[^>]*>([\\d:]+)<\\/span>[\\s\\S]*$");
 
         require(captures.length == 5, "Subject must match the expected pattern");
-        require(captures[1].equal(date), "Date not match");
-        require(captures[3].equal(pickupTime), "Pickup time not match");
-        require(captures[4].equal(dropoffTime), "Dropoff time not match");
+//        require(captures[1].equal(date), "Date not match");
+//        require(captures[3].equal(pickupTime), "Pickup time not match");
+//        require(captures[4].equal(dropoffTime), "Dropoff time not match");
 
         string memory date = captures[1];
         string memory pickupTime = captures[3];

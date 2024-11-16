@@ -59,7 +59,7 @@ const hash = await vlayer.prove({
   functionName: "main",
   chainId: chain.id,
   // args: [unverifiedEmail, "^.*?804173948@qq\\.com.*?$", "20:33", "20:44"],
-  args: [unverifiedEmail, "^.*?0xja\\.eth@gmail\\.com.*?$", "15 November 2024", "20:33", "20:44"],
+  args: [unverifiedEmail, "^.*?0xja\\.eth@gmail\\.com.*?$"] //, "15 November 2024", "20:33", "20:44"],
 });
 
 const result = await vlayer.waitForProvingResult(hash);
