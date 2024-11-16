@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express';
 import fs from 'fs';
+import multer from 'multer';
 import { createVlayerClient, preverifyEmail } from '@vlayer/sdk';
 import { getConfig, createContext } from '@vlayer/sdk/config';
 import proverSpec from '../out/EmailProver.sol/EmailProver';
@@ -12,21 +13,27 @@ const PORT = 3001;
 // Enable JSON body parsing
 app.use(express.json());
 
+// Set up multer for file uploads (temporary storage in the 'uploads' folder)
+const upload = multer({ dest: 'uploads/' });
+
 // Define prover and verifier addresses as constants
 const prover = process.env.PROVER_ADDRESS;
 const verifier = process.env.VERIFIER_ADDRESS;
 
-console.log({ prover, verifier })
+console.log({ prover, verifier });
 
-// Route to handle generating proof from EML content
-app.post('/generate-proof', async (req: Request, res: Response) => {
+// Route to handle generating proof from EML file upload
+app.post('/api/generate-proof/:email', upload.single('emlFile'), async (req: Request, res: Response) => {
   try {
-    // Retrieve EML content from request body
-    const { emlContent } = req.body;
-
-    if (!emlContent) {
-      return res.status(400).send('Please provide EML content');
+    // Check if the file was uploaded
+    if (!req.file) {
+      return res.status(400).send('Please upload an EML file');
     }
+
+    const { email } = req.params;
+
+    // Read the content of the uploaded EML file
+    const emlContent = fs.readFileSync(req.file.path, 'utf-8');
 
     // Pre-verify the email content
     const unverifiedEmail = await preverifyEmail(emlContent);
@@ -47,12 +54,16 @@ app.post('/generate-proof', async (req: Request, res: Response) => {
       proverAbi: proverSpec.abi,
       functionName: 'main',
       chainId: chain.id,
-      args: [unverifiedEmail, '^.*?0xja\\.eth@gmail\\.com.*?$', '15 November 2024', '20:33', '20:44'],
+      args: [unverifiedEmail, `^.*?${email}.*?$`, '15 November 2024', '20:33', '20:44'],
+      // args: [unverifiedEmail, '^.*?0xja\\.eth@gmail\\.com.*?$', '15 November 2024', '20:33', '20:44'],
     });
 
     // Wait for the proof result
     const proofResult = await vlayer.waitForProvingResult(hash);
     console.log('Proof:', proofResult);
+
+    // Tmp Fix:
+    // proofResult[0].callGuestId = "0xc0f59f76de44b1700c2de89e0eeffbbad523e049b6beef55441f371811f62767"
 
     // Save the proof result to a file
     fs.writeFileSync('./testdata/bolt-email-proof.json', JSON.stringify(proofResult, undefined, 2));
@@ -78,6 +89,11 @@ app.post('/generate-proof', async (req: Request, res: Response) => {
     });
 
     console.log('Verified!');
+
+    // Delete the uploaded file after processing
+    fs.unlink(req.file.path, (err) => {
+      if (err) console.error('Error deleting the temporary file:', err);
+    });
 
     // Return the verification result to the client
     res.json({

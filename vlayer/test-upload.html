@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload EML File</title>
+</head>
+<body>
+<h1>Upload EML File</h1>
+<form id="uploadForm" enctype="multipart/form-data">
+  <input type="file" id="emlFile" name="emlFile" accept=".eml" required />
+  <button type="submit">Upload</button>
+</form>
+
+<div id="result" style="margin-top: 20px;">
+  <h2>Parsed Email Information</h2>
+  <p><strong>TxHash:</strong> <span id="txHash"></span></p>
+</div>
+
+<script>
+  document.getElementById('uploadForm').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    
+    const formData = new FormData();
+    const fileInput = document.getElementById('emlFile');
+    const file = fileInput.files[0];
+    
+    if (!file) {
+      alert('Please select an EML file to upload');
+      return;
+    }
+    
+    formData.append('emlFile', file);
+    
+    try {
+      const email = "0xja.eth@gmail.com"
+      const response = await fetch('http://localhost:3001/api/generate-proof/' + encodeURIComponent(email), {
+        method: 'POST',
+        body: formData,
+      });
+      
+      if (response.ok) {
+        const data = await response.json();
+
+        console.log("data", data);
+
+        document.getElementById('txHash').textContent = data.txHash || 'N/A';
+      } else {
+        const errorText = await response.text();
+        alert('Error: ' + errorText);
+      }
+    } catch (error) {
+      console.error('Upload failed:', error);
+      alert('Server error');
+    }
+  });
+</script>
+</body>
+</html>

@@ -18,7 +18,7 @@ contract EmailProver is Prover, Ownable {
     using AddressParser for string;
     using EmailProofLib for UnverifiedEmail;
 
-    string public targetDomain = "^.*?bangkok@bolt.eu.*?$";
+    string public targetDomain = "^.*?bangkok@bolt\\.eu.*?$";
 
 //    struct ProvedEmail {
 //        Proof proof;
@@ -36,12 +36,12 @@ contract EmailProver is Prover, Ownable {
     }
 
     function main(UnverifiedEmail calldata unverifiedEmail,
-        string memory to, string memory date, string memory pickupTime, string memory dropoffTime
+        string memory toEmail // string memory date, string memory pickupTime, string memory dropoffTime
     ) public view returns (Proof memory, string memory, string memory, string memory, string memory) {
         VerifiedEmail memory email = unverifiedEmail.verify();
 
-//        require(email.from.matches(targetDomain), "Email not from the bolt");
-        require(email.to.matches(to), "Email not to the expected address");
+        require(email.from.matches(targetDomain), "Email not from the bolt");
+        require(email.to.matches(toEmail), "Email not to the expected address");
 
         string[] memory captures = email.body.capture("^[\\s\\S]*&#44; (\\d{1,2} (January|February|March|April|May|June|July|August|September|October|November|December) \\d{4})<\\/span>[\\s\\S]*<span>Pickup:<\\/span>[\\s\\S]*?<span[^>]*>([\\d:]+)<\\/span>[\\s\\S]*?<span>Dropoff:<\\/span>[\\s\\S]*?<span[^>]*>([\\d:]+)<\\/span>[\\s\\S]*$");
 
@@ -49,6 +49,10 @@ contract EmailProver is Prover, Ownable {
         require(captures[1].equal(date), "Date not match");
         require(captures[3].equal(pickupTime), "Pickup time not match");
         require(captures[4].equal(dropoffTime), "Dropoff time not match");
+
+        string memory date = captures[1];
+        string memory pickupTime = captures[3];
+        string memory dropoffTime = captures[4];
 
 //        ProvedEmail memory pEmail = ProvedEmail(proof(), email.to, date, pickupTime, dropoffTime);
 //        provedEmails.push(pEmail);
