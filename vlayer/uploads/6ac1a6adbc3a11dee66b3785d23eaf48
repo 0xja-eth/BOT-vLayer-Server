@@ -1,0 +1,2201 @@
+Delivered-To: 0xja.eth@gmail.com
+Received: by 2002:a05:7000:188b:b0:5c8:c6eb:42f6 with SMTP id r11csp1005434max;
+        Fri, 15 Nov 2024 06:00:16 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEBWaWGBlNIYfWB59RqGAjviqwpt6aCLV4ZdIcgFZfkce2HvL1duMUGoT5aWl0V/vLUTj6C
+X-Received: by 2002:a05:600c:1ca7:b0:426:8884:2c58 with SMTP id 5b1f17b1804b1-432df71b99dmr23169845e9.4.1731679216105;
+        Fri, 15 Nov 2024 06:00:16 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1731679216; cv=none;
+        d=google.com; s=arc-20240605;
+        b=j/4s9B7aNbZcoWA7edehz3/v6VGPKhshQOaKCVnNcu1msVZdlA46j/b4aFhSCbHqul
+         ruHzkMgWHsWFERY5q4QpUhplyDDqMQuF+zavH/WM/6pWjYxgWZNGcuoM1aMKUQU0NcmF
+         Cw93tuFhgAFfxiuY/mMRvY23XnO/vTVUhv2kHTNjirZTjqyAzbHIKtJtpjW0EccPo9bx
+         oy0rVXKoSdXLBkJ0LaUeU6Qp+CfM/pLV3mtaoCrISZIejLdSIG1VzhlPSF1U7MCl2WZb
+         EvX4lhpm3DcFnKDtCuPzAr/m1+LBgq1ezzfpqgXXCrjaKIpjAu5jKKb8MniUAX0fRccl
+         uILw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:mime-version:date:content-transfer-encoding:message-id
+         :subject:to:from:dkim-signature:dkim-signature;
+        bh=W2s3cfHW8Kluh8HJIGdbXOAdsCvJbbFr9DaIxWHtFmA=;
+        fh=l1wjy1FWOF6jtH29AJ4HGLPREYsJjwKOuCRi6PWTW5Q=;
+        b=UHkxDEVFrd31TF0KTCoHQA1Z0QfGJj8A0JIz30mPrTlRY4KGmGbkWY1xHR9MZ0Mir7
+         Rn8Gr28JNJw8aIrExttdsJwszNx3E2OWkbXuYo41QT6kRbP7cEYef2cbgpnZO6XUTLh3
+         ZZpjkzOTexqmn/i5hxZXkYoWXzflAjscbrajIz1HoiSTSiMhrSTYJqziN7BW9oyfNa5q
+         T+CNjpkCFvohwUvGcUABlEcj+Q0+p64lFEq5h5hpO58tijsqTVDXP7Ih+zGGbfskhPJ1
+         ONzQHxOGXnbkZzU9GJvj6WWTjtH0CJQb7555rjKRk6ia1ND2PCK+3epKi8RzCmH2tL9b
+         ivmA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@bolt.eu header.s=el7njvpsjxbr7wk7l7dss5ejzvijzoeu header.b=a4wpJsry;
+       dkim=pass header.i=@amazonses.com header.s=54ecsf3zk7z4mwxwwox7z7bg6e5gwjsz header.b=ACWv3Hyx;
+       spf=pass (google.com: domain of 01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000@bounce-eu-central-1.bolt.eu designates 69.169.224.58 as permitted sender) smtp.mailfrom=01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000@bounce-eu-central-1.bolt.eu;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=bolt.eu
+Return-Path: <01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000@bounce-eu-central-1.bolt.eu>
+Received: from b224-58.smtp-out.eu-central-1.amazonses.com (b224-58.smtp-out.eu-central-1.amazonses.com. [69.169.224.58])
+        by mx.google.com with ESMTPS id 5b1f17b1804b1-432dac253d5si23229515e9.153.2024.11.15.06.00.15
+        for <0xja.eth@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 15 Nov 2024 06:00:16 -0800 (PST)
+Received-SPF: pass (google.com: domain of 01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000@bounce-eu-central-1.bolt.eu designates 69.169.224.58 as permitted sender) client-ip=69.169.224.58;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@bolt.eu header.s=el7njvpsjxbr7wk7l7dss5ejzvijzoeu header.b=a4wpJsry;
+       dkim=pass header.i=@amazonses.com header.s=54ecsf3zk7z4mwxwwox7z7bg6e5gwjsz header.b=ACWv3Hyx;
+       spf=pass (google.com: domain of 01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000@bounce-eu-central-1.bolt.eu designates 69.169.224.58 as permitted sender) smtp.mailfrom=01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000@bounce-eu-central-1.bolt.eu;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=bolt.eu
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=el7njvpsjxbr7wk7l7dss5ejzvijzoeu; d=bolt.eu; t=1731679215;
+	h=Content-Type:From:To:Subject:Message-ID:Content-Transfer-Encoding:Date:MIME-Version;
+	bh=UOh/2Et6BG5bbaSIsPQOL4/eHtzn1FP8Fo1BXTyccc8=;
+	b=a4wpJsrynE32wYSxR9HPytlprUEBge5DCUCZcvB1fIfiA1stHe4MB3g/bisjuoxp
+	KaFduHP3XlMhpaYDiABI5B66GXNiT6DoRW5DNpglPPMr3FKElDUWO1dxn+Dmv+PRsmL
+	gbDWT+aNhrOaTq5hcvcvOMB7n+0vqxleALUD04lg=
+Content-Type: text/html; charset=utf-8
+From: Bolt Thailand <bangkok@bolt.eu>
+To: Li <0xja.eth@gmail.com>
+Subject: Your Bolt trip on Friday
+Message-ID: <01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000@eu-central-1.amazonses.com>
+Content-Transfer-Encoding: quoted-printable
+Date: Fri, 15 Nov 2024 14:00:15 +0000
+MIME-Version: 1.0
+Feedback-ID: ::1.eu-central-1.Iw3A2QVyXllb/zTSb0pR+vg3L1wSOw8eTtUZKrDF7hI=:AmazonSES
+X-SES-Outgoing: 2024.11.15-69.169.224.58
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/x=
+html1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+" />
+    <meta name=3D"x-apple-disable-message-reformatting" />
+    <meta name=3D"format-detection" content=3D"telephone=3Dno" />
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width; initial-scale=
+=3D1; maximum-scale=3D1; user-scalable=3Dno;" />
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3D9; IE=3D8; IE=3D7;=
+ IE=3DEDGE" />
+
+    <title>Rider Receipt Email</title>
+
+    <style type=3D"text/css">
+        #bodyTable {
+            height: 100% !important;
+            width: 100% !important;
+            margin: 0;
+            padding: 0
+        }
+
+        a img,
+        img {
+            border: 0;
+            outline: 0;
+            text-decoration: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            word-break: break-word
+        }
+
+        .mp0 {
+            margin: 0 !important;
+            padding: 0 !important
+        }
+
+        table {
+            mso-table-lspace: 0 !important;
+            mso-table-rspace: 0 !important
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic
+        }
+
+        #bodyTable,
+        body,
+        table {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%
+        }
+
+        .color-contentPrimary {
+            color: #2f313f
+        }
+
+        .color-contentSecondary {
+            color: #818391
+        }
+
+        .color-contentTertiary {
+            color: #a9abb9
+        }
+
+        .color-contentPrimaryInverted {
+            color: #fff
+        }
+
+        .color-linkPrimary,
+        .color-linkPrimary:visited {
+            color: #249e64 !important
+        }
+
+        .color-yellowBackground {
+            background-color: #fff8d6
+        }
+
+        .color-green700 {
+            color: #249e64
+        }
+
+        .color-green900 {
+            color: #186841
+        }
+
+        .color-accentPurple {
+            color: #5b68f6
+        }
+
+        .color-red700 {
+            color: #c91d2b
+        }
+
+        .link,
+        a {
+            text-decoration: none !important;
+            color: #249e64;
+        }
+
+        .headingLarge {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 44px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        .heading {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 36px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        .headingXS {
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        .bodyLarge {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        .bodyLargeBold {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 24px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        .bodyMedium {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        .bodyMediumBold {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        .bodySmall {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        .bodyXS {
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        .caption {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        .captionBold {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 16px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        @media only screen and (max-width:600px) {
+            .headingLarge {
+                font-size: 28px !important;
+                line-height: 36px !important
+            }
+
+            .bodyLarge {
+                font-size: 16px !important
+            }
+
+            .bodyLargeBold {
+                font-size: 16px !important
+            }
+        }
+
+        .height-40 {
+            height: 40px
+        }
+
+        .spacing-outer {
+            padding-top: 40px;
+            padding-right: 40px;
+            padding-left: 40px
+        }
+
+        .spacing-outer-carbon-neutral-banner {
+            padding-top: 40px;
+            padding-right: 0;
+            padding-left: 40px;
+            padding-bottom: 40px
+        }
+
+        .spacing-outer-safety-banner {
+            padding: 40px
+        }
+
+        .spacing-outer-giveget-banner {
+            padding: 24px
+        }
+
+        .routePoints-text {
+            padding: 0 16px 17px 16px
+        }
+
+        .spacing-outer-sides {
+            padding-right: 40px;
+            padding-left: 40px
+        }
+
+        .spacing-outer-32 {
+            padding-top: 32px;
+            padding-right: 40px;
+            padding-left: 40px
+        }
+
+        .spacing-outer-16 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-right: 16px;
+            padding-left: 16px
+        }
+
+        .spacing-outer-24 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-right: 24px;
+            padding-left: 24px
+        }
+
+        .spacing-outer-label {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 16px;
+            padding-right: 16px
+        }
+
+        .spacing-inner-label {
+            padding-top: 12px;
+            padding-left: 16px;
+            padding-right: 16px
+        }
+
+        .spacing-outer-promo {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 24px;
+            padding-right: 24px
+        }
+
+        .spacing-bottom-40,
+        .spacing-bottom-40-sm {
+            padding-bottom: 40px
+        }
+
+        .spacing-bottom-24 {
+            padding-bottom: 24px
+        }
+
+        .spacing-bottom-16 {
+            padding-bottom: 16px
+        }
+
+        .spacing-bottom-16-sm {
+            padding-bottom: 16px
+        }
+
+        .spacing-bottom-8 {
+            padding-bottom: 8px
+        }
+
+        .spacing-bottom-4 {
+            padding-bottom: 4px
+        }
+
+        .spacing-top-8-sm {
+            padding-top: 8px
+        }
+
+        .spacing-car-image {
+            padding-right: 40px;
+        }
+
+        .container-border-top {
+            display: block;
+            border-top: 0;
+            border-right: 1px solid #e9eaee;
+            border-bottom: 0;
+            border-left: 1px solid #e9eaee
+        }
+
+        .container-border {
+            border-top: 0;
+            border-right: 1px solid #e9eaee;
+            border-bottom: 0;
+            border-left: 1px solid #e9eaee
+        }
+
+
+        .container-border-bottom {
+            display: block;
+            border-top: 0;
+            border-right: 1px solid #e9eaee;
+            border-bottom: 1px solid #e9eaee;
+            border-left: 1px solid #e9eaee;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 16px;
+            border-bottom-left-radius: 16px
+        }
+
+        .comment-spacing {
+            padding-top: 4px
+        }
+
+        .label {
+            padding-top: 8px;
+            padding-bottom: 4px
+        }
+
+        .img {
+            display: block
+        }
+
+        .img-social-link {
+            display: block;
+            padding-top: 8px;
+            padding-right: 8px;
+            padding-bottom: 8px;
+            padding-left: 8px
+        }
+
+        .safety-banner-image {
+            width: 96px;
+            height: 96px
+        }
+
+        .giveget-banner-image {
+            width: 160px;
+            height: 108px
+        }
+
+        .banner-spacing {
+            padding-right: 112px;
+            padding-bottom: 0
+        }
+
+        @media only screen and (max-width:600px) {
+
+            #bodyContainer,
+            #footerContainer,
+            #headerContainer {
+                width: 100% !important
+            }
+
+            .routePoints {
+                display: none
+            }
+
+            .spacing-outer {
+                padding-top: 24px !important;
+                padding-right: 16px !important;
+                padding-left: 16px !important
+            }
+
+            .spacing-outer-sides {
+                padding-right: 16px !important;
+                padding-left: 16px !important
+            }
+
+            .spacing-outer-32 {
+                padding-top: 28px !important;
+                padding-right: 16px !important;
+                padding-left: 16px !important
+            }
+
+            .spacing-outer-24 {
+                padding-top: 0;
+                padding-bottom: 0;
+                padding-right: 16px !important;
+                padding-left: 16px !important
+            }
+
+            .spacing-outer-16 {
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+                padding-right: 0 !important;
+                padding-left: 0 !important
+            }
+
+            .spacing-bottom-16-sm {
+                padding-bottom: 12px !important
+            }
+
+            .spacing-top-8-sm {
+                padding-top: 4px !important
+            }
+
+            .spacing-bottom-40-sm {
+                padding-bottom: 24px !important
+            }
+
+            .spacing-outer-carbon-neutral-banner {
+                padding-top: 40px !important;
+                padding-right: 0 !important;
+                padding-left: 16px !important;
+                padding-bottom: 40px !important
+            }
+
+            .spacing-outer-safety-banner {
+                padding-top: 24px !important;
+                padding-right: 24px !important;
+                padding-left: 24px !important;
+                padding-bottom: 24px !important
+            }
+
+            .routePoints-text {
+                padding: 8px 0 !important
+            }
+
+            .container-border-bottom,
+            .container-border,
+            .container-border-top {
+                border: 0 !important;
+                border-radius: 0 !important
+            }
+
+            .container-border-bottom {
+                border-bottom: 1px solid #f4f4f6 !important
+            }
+
+            .banner-spacing {
+                padding-right: 20px !important
+            }
+
+            .spacing-car-image {
+                padding-right: 16px !important
+            }
+
+            .giveGetImg {
+                display: none;
+            }
+
+            .notOnMobile {
+                display: none;
+            }
+        }
+
+        /* GMAIL FIXES */
+        @media only screen and (max-width: 480px) {
+
+            u~div,
+            u+#body {
+                min-width: 100% !important;
+            }
+        }
+    </style>
+</head>
+
+<body id=3D"body">
+    <div style=3D"display:none; max-height: 0px; overflow: hidden;">
+        Thanks for choosing Bolt =E2=80=94 here's your ride receipt!
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&n=
+bsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp=
+;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&n=
+bsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj=
+;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&n=
+bsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj=
+;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&n=
+bsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj=
+;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&z=
+wnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj=
+;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&z=
+wnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj=
+;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&z=
+wnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj=
+;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&z=
+wnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj=
+;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&z=
+wnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj=
+;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&z=
+wnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj=
+;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&n=
+bsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=20
+    </div>
+    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" =
+id=3D"bodyTable">
+        <tr>
+            <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"wid=
+th:100%; max-width:100%; min-width:100%;">
+
+                <!-- Email Header -->
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" id=3D"headerWrapper"
+                    bgcolor=3D"#249E64"
+                    style=3D"background-color:#249E64; ">
+                    <tr>
+                        <td align=3D"center" valign=3D"top">
+                            <table border=3D"0" cellpadding=3D"16" cellspac=
+ing=3D"0" width=3D"602" id=3D"headerContainer">
+                                <tr>
+                                    <td align=3D"center" valign=3D"top" cla=
+ss=3D"spacing-outer container-border-top">
+
+                                        <!-- Email Header Content -->
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%"
+                                            id=3D"headerContent">
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%"
+                                                        id=3D"headerContent=
+Logo" style=3D"max-width:100%; min-width:100%;">
+                                                        <tr>
+                                                            <td align=3D"le=
+ft">
+                                                                <img src=3D=
+"https://static.bolt.eu/email/images/46-image-554.png" border=3D"0" width=
+=3D"56"
+                                                                    height=
+=3D"32" alt=3D"Bolt"
+                                                                    class=
+=3D"bodySmall color-contentPrimaryInverted img"
+                                                                    id=3D"i=
+mgLogo" />
+                                                            </td>
+                                                            <td align=3D"ri=
+ght">
+
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+                                                                    width=
+=3D"100%" id=3D"headerContentHeading">
+                                                                    <tr>
+                                                                        <td=
+ align=3D"right">
+                                                                           =
+ <span
+                                                                           =
+     class=3D"caption color-contentPrimaryInverted">Total:
+                                                                           =
+ </span>
+                                                                           =
+ <span
+                                                                           =
+     class=3D"captionBold color-contentPrimaryInverted">=E0=B8=BF55.00</spa=
+n>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+ align=3D"right">
+                                                                           =
+ <span
+                                                                           =
+     class=3D"caption color-contentPrimaryInverted">Friday&#44; 15 November=
+ 2024</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=3D"he=
+ight-40" colspan=3D"2"></td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <!-- if [$email_subscri=
+ption_disclaimer] is not empty -->
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%"
+                                                        id=3D"headerContent=
+Heading">
+                                                        <tr>
+                                                            <td align=3D"le=
+ft" valign=3D"top" class=3D"spacing-bottom-16">
+                                                                <h1
+                                                                    class=
+=3D"headingLarge color-contentPrimaryInverted mp0">
+                                                                    Thanks =
+for riding with us, Li</h1>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align=3D"le=
+ft" valign=3D"top">
+                                                                <span
+                                                                    class=
+=3D"bodyLarge color-contentPrimaryInverted">We hope you enjoyed your ride</=
+span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- // Email Header Content -->
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!--/ Email Header -->
+
+                <!-- Image Header -->
+                <table cellPadding=3D"0" cellSpacing=3D"0"
+                    style=3D"border-width:0;--ms-text-style-adjust:100%;--w=
+ebkit-text-size-adjust:100%;width:100%;max-width:100%;min-width:100%;">
+                    <tbody>
+                        <tr>
+                            <td valign=3D"top">
+                                <table cellPadding=3D"1" cellSpacing=3D"0"
+                                    style=3D"border-width:0;--ms-text-style=
+-adjust:100%;--webkit-text-size-adjust:100%;width:100%;max-width:100%;min-w=
+idth:100%;">
+                                    <tr>
+                                        <td valign=3D"top" style=3D"padding=
+:0">
+                                            <div
+                                                style=3D"height: 56px; back=
+ground-color:#249E64">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td align=3D"center" valign=3D"top" width=3D"60=
+0px" valign=3D"top" class=3D"container-border"
+                                style=3D"width: 600px;" height=3D"112">
+
+                                <!--[if gte mso 9]>
+                  <v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D=
+"true" stroke=3D"false" style=3D"width:600px; height:112px;" fillcolor=3D"#=
+249E64">
+                  <v:fill type=3D"gradient" color2=3D"#249E64" colors=3D"0%=
+ #FFFFFF, 51% #FFFFFF, 51% #249E64" position=3D"0, 0" origin=3D"0, 0" />
+                  <v:textbox inset=3D"0,0,0,0">
+                <![endif]-->
+                                <table cellPadding=3D"0" cellSpacing=3D"0" =
+width=3D"600px"
+                                    style=3D"--ms-text-style-adjust:100%;--=
+webkit-text-size-adjust:100%;width:100%;box-sizing: border-box;">
+                                    <tbody>
+                                        <tr>
+                                            <td width=3D"600" valign=3D"top=
+" align=3D"right">
+                                                <div
+                                                    style=3D"height: 56px; =
+background-color:#249E64">
+                                                     <img
+                                                        src=3D"https://stat=
+ic.bolt.eu/email/images/46-image-539.png"
+                                                        height=3D"112" alt=
+=3D"Car" class=3D"spacing-car-image" />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--[if gte mso 9]>
+                              </v:textbox>
+                            </v:rect>
+                            <![endif]-->
+                            </td>
+                            <td valign=3D"top">
+                                <table cellPadding=3D"1" cellSpacing=3D"0"
+                                    style=3D"border-width:0;--ms-text-style=
+-adjust:100%;--webkit-text-size-adjust:100%;width:100%;max-width:100%;min-w=
+idth:100%;">
+                                    <tr>
+                                        <td valign=3D"top" style=3D"padding=
+:0">
+                                            <div
+                                                style=3D"height: 56px; back=
+ground-color:#249E64">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--/ Image Header -->
+
+                <!-- Email Body -->
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" id=3D"bodyWrapper" bgcolor=3D"#FFFFFF"
+                    style=3D"background-color:#FFFFFF; ">
+                    <tr>
+                        <td align=3D"center" valign=3D"top">
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"602" id=3D"bodyContainer"
+                                class=3D"container-border-bottom">
+
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+
+                                        <!-- Info Labels -->
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr>
+                                                <td class=3D"spacing-outer-=
+sides"
+                                                    style=3D"padding-top: 2=
+4px; padding-bottom: 24px;">
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr>
+                                                            <!-- Label noti=
+fication -->
+                                                            <!-- /Label not=
+ification -->
+                                                        </tr>
+                                                        <tr>
+                                                            <!-- Label succ=
+ess -->
+                                                            <!-- /Label suc=
+cess -->
+                                                        </tr>
+                                                        <tr>
+                                                            <!-- Label erro=
+r -->
+                                                            <!--/ Label err=
+or -->
+                                                        </tr>
+                                                        <tr>
+                                                            <!-- Label disc=
+ount -->
+                                                            <!--/ Label dis=
+count -->
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!--/ Info Labels-->
+
+                                        <!-- Total row -->
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr>
+                                                <td class=3D"spacing-outer-=
+sides">
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr>
+                                                            <td class=3D"sp=
+acing-bottom-16-sm spacing-top-8-sm">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0"
+                                                                    cellspa=
+cing=3D"0" style=3D"border-collapse: collapse;">
+                                                                    <tr>
+                                                                        <td=
+ class=3D"heading color-contentPrimary">
+                                                                           =
+ <span>Total</span>
+                                                                        </t=
+d>
+                                                                        <td=
+ align=3D"right"
+                                                                           =
+ class=3D"heading color-contentPrimary">
+                                                                           =
+ <span>=E0=B8=BF55.00</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- /Total row -->
+
+                                        <!-- Details -->
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr>
+                                                <td class=3D"spacing-outer-=
+sides"
+                                                    style=3D"padding-top: 1=
+6px; padding-bottom: 0px;">
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr>
+                                                            <td class=3D"sp=
+acing-bottom-16">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0"
+                                                                    cellspa=
+cing=3D"0" style=3D"border-collapse: collapse;">
+                                                                    <tr>
+                                                                        <td=
+ class=3D"bodyLarge color-contentPrimary">
+                                                                           =
+ <span>Fare</span>
+                                                                        </t=
+d>
+                                                                        <td=
+ align=3D"right"
+                                                                           =
+ class=3D"bodyLarge color-contentPrimary">
+                                                                           =
+ <span>=E0=B8=BF55.00</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td
+                                                                           =
+ class=3D"bodySmall color-contentSecondary comment-spacing">
+                                                                           =
+ <span></span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- / Details -->
+
+                                        <!-- Element Divider -->
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%">
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"100%" class=3D"spacing-outer-sides"
+                                                    style=3D"padding-top: 0=
+px; padding-bottom: 0px;">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%"
+                                                        id=3D"elementDivide=
+r2" height=3D"1" style=3D"height: 1px;">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" bgcolor=3D"#F0F2F5"
+                                                                width=3D"10=
+0%"
+                                                                style=3D"ba=
+ckground-color:#F0F2F5; height: 1px;"></td>
+                                                        </tr>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- // Element Divider -->
+
+                                        <!-- Detailed reciept -->
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr>
+                                                <td class=3D"spacing-outer-=
+sides"
+                                                    style=3D"padding-top: 1=
+6px; padding-bottom: 0px;">
+
+
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr>
+                                                            <td>
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0"
+                                                                    cellspa=
+cing=3D"0" style=3D"border-collapse: collapse;">
+                                                                    <tr>
+                                                                        <td=
+ class=3D"bodyLarge color-contentPrimary">
+                                                                           =
+ <span>Total</span>
+                                                                        </t=
+d>
+                                                                        <td=
+ align=3D"right"
+                                                                           =
+ class=3D"bodyLarge color-contentPrimary">
+                                                                           =
+ <span>=E0=B8=BF55.00</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- / Discount -->
+
+                                        <!-- Element Divider -->
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%">
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"100%" class=3D"spacing-outer-sides"
+                                                    style=3D"padding-top: 0=
+px; padding-bottom: 0px;">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%"
+                                                        id=3D"elementDivide=
+r6" height=3D"1" style=3D"height: 1px;">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" bgcolor=3D"#F0F2F5"
+                                                                width=3D"10=
+0%"
+                                                                style=3D"ba=
+ckground-color:#F0F2F5; height: 1px;"></td>
+                                                        </tr>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- // Element Divider -->
+
+                                        <!-- Total charged -->
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr>
+                                                <td class=3D"spacing-outer-=
+sides" style=3D"padding-top: 24px;">
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr>
+                                                            <td class=3D"sp=
+acing-bottom-16">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0"
+                                                                    cellspa=
+cing=3D"0" style=3D"border-collapse: collapse;">
+                                                                    <tr>
+                                                                        <td=
+ class=3D"bodyLargeBold color-contentPrimary">
+                                                                           =
+ <span>Total charged</span>
+                                                                        </t=
+d>
+                                                                        <td=
+ align=3D"right"
+                                                                           =
+ class=3D"bodyLargeBold color-contentPrimary">
+                                                                           =
+ <span>=E0=B8=BF55.00</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr>
+                                                            <td class=3D"sp=
+acing-bottom-16">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0"
+                                                                    cellspa=
+cing=3D"0" style=3D"border-collapse: collapse;">
+                                                                        <tr=
+>
+                                                                           =
+ <td align=3D"left" valign=3D"middle" width=3D"32"
+                                                                           =
+     class=3D"imgWrapper">
+                                                                           =
+     <img src=3D"https:&#x2F;&#x2F;static.bolt.eu&#x2F;payment&#x2F;icons&#=
+x2F;visa.png"
+                                                                           =
+         border=3D"0" width=3D"24" height=3D"24"
+                                                                           =
+         alt=3D"PaymentIcon"
+                                                                           =
+         class=3D"bodySmall color-contentSecondary img"
+                                                                           =
+         id=3D"imgPayment" />
+                                                                           =
+ </td>
+                                                                           =
+ <td align=3D"left" class=3D"bodyLarge ">
+                                                                           =
+     <span>=E2=80=A2=E2=80=A2=E2=80=A2=E2=80=A2 3300</span>
+                                                                           =
+ </td>
+                                                                           =
+ <td align=3D"right" class=3D"bodyLarge ">
+                                                                           =
+     <span>=E0=B8=BF55.00</span>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <!-- Space divider -->
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr>
+                                                            <td height=3D"2=
+2px;" style=3D"height: 22px;"></td>
+                                                        </tr>
+                                                    </table>
+                                                    <!-- End of Space divid=
+er -->
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- / Total charged -->
+
+                                        <!-- Hold info -->
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr>
+                                                <td class=3D"spacing-outer-=
+sides"
+                                                    style=3D"padding-top: 0=
+px; padding-bottom: 0px;">
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr>
+                                                            <td class=3D"sp=
+acing-bottom-24">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0"
+                                                                    cellspa=
+cing=3D"0" style=3D"border-collapse: collapse;">
+                                                                    <tr>
+                                                                        <td=
+>
+                                                                           =
+ <span
+                                                                           =
+     class=3D"bodySmall color-contentPrimary"></span>
+                                                                           =
+ <span><a href=3D""
+                                                                           =
+         class=3D"link"><span
+                                                                           =
+             class=3D"bodySmall color-linkPrimary"></span></a></span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- / Hold info -->
+
+                                        <!-- if order is from EU -->
+                                        <!-- Carbon Neutral Banner -->
+                                        <!-- End of Carbon Neutral Banner -=
+->
+
+                                        <!-- if order is not from EU -->
+                                        <!-- Safety Banner -->
+                                        <table width=3D"100%" bgcolor=3D"#F=
+FF8D6" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+                                            style=3D"border-collapse: colla=
+pse; background: #FFF8D6;">
+                                            <tr>
+                                                <td class=3D"spacing-outer-=
+safety-banner">
+                                                    <a href=3D"" style=3D"t=
+ext-decoration: none;">
+                                                        <table width=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+                                                            style=3D"border=
+-collapse: collapse;">
+                                                            <tr>
+                                                                <td>
+                                                                    <table =
+width=3D"100%" border=3D"0" cellpadding=3D"0"
+                                                                        cel=
+lspacing=3D"0"
+                                                                        sty=
+le=3D"border-collapse: collapse;">
+                                                                        <tr=
+>
+                                                                           =
+ <td style=3D"padding: 0 80px 16px 0;">
+                                                                           =
+     <span
+                                                                           =
+         class=3D"heading color-contentPrimary" style=3D"word-break: normal=
+;">Your safety is our priority</span>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                        <tr=
+>
+                                                                           =
+ <td class=3D"spacing-bottom-40-sm banner-spacing"
+                                                                           =
+     style=3D"padding-right: 80px;">
+                                                                           =
+     <span
+                                                                           =
+         class=3D"bodyLarge color-contentPrimary">We=E2=80=99re committed t=
+o improving your ride experience and are always looking for ways to ensure =
+you=E2=80=99re as safe as possible while riding with us.</span>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                        <tr=
+>
+                                                                           =
+ <td style=3D"padding: 40px 0 0 0;"
+                                                                           =
+     class=3D"spacing-bottom-40-sm banner-spacing">
+                                                                           =
+     <span>
+                                                                           =
+         <a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2=
+F%2Fblog.bolt.eu%2Fen%2Fbolt-safety%2F%3Futm_source=3Dreceipt_email%26utm_m=
+edium=3Dsafety_block%26utm_campaign=3Drider_receipt/1/01070193301fdf43-4463=
+fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/x5LHg7aHlOdFQ-ReqsqJeCkW1Yw=3D181"
+                                                                           =
+             class=3D"link">
+                                                                           =
+             <span
+                                                                           =
+                 class=3D"bodyLargeBold color-linkPrimary">
+                                                                           =
+                 Learn more
+                                                                           =
+                 =E2=86=92
+                                                                           =
+             </span>
+                                                                           =
+         </a>
+                                                                           =
+     </span>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                    </table=
+>
+                                                                </td>
+                                                                <td>
+                                                                    <img sr=
+c=3D"https://static.bolt.eu/email/images/46-image-549.png" />
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- End of Safety Banner -->
+                                        <!-- // end if -->
+
+
+                                        <!-- Ride details -->
+                                        <table width=3D"100%" height=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+                                            style=3D"border-collapse: colla=
+pse;">
+                                            <tr>
+                                                <td class=3D"spacing-outer-=
+32">
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+                                                        style=3D"border-col=
+lapse: collapse;">
+                                                        <tr>
+                                                            <td class=3D"he=
+ading spacing-bottom-4 color-contentPrimary">
+                                                                <span>Ride =
+details</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td
+                                                                class=3D"bo=
+dySmall color-contentSecondary spacing-bottom-16">
+                                                                <span>Frida=
+y&#44; 15 November 2024</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <!-- Route Map -->
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" width=3D"100%"
+                                                                style=3D"pa=
+dding-bottom: 16px;">
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+                                                                    width=
+=3D"100%">
+                                                                    <tr>
+                                                                        <im=
+g src=3D"https://staticmaps.live.boltsvc.net/mapImage/get?token=3DeyJhbGciO=
+iJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImltYWdlX3dpZHRoIjo1MTgsImltYWdlX2h=
+laWdodCI6MjU5LCJwaWNrdXBfbWFya2VyIjp7Imljb24iOiJodHRwczovL2ltYWdlcy5ib2x0Lm=
+V1L2ludm9pY2luZy9lbWFpbF9tYXBfc3RhcnRfcG9pbnQucG5nIiwibG9jYXRpb24iOnsibGF0I=
+joxMy43MzYyMjEsImxuZyI6MTAwLjU3MjM5OH19LCJkcm9wb2ZmX21hcmtlciI6eyJpY29uIjoi=
+aHR0cHM6Ly9pbWFnZXMuYm9sdC5ldS9pbnZvaWNpbmcvZW1haWxfbWFwX2ZpbmlzaF9wb2ludC5=
+wbmciLCJsb2NhdGlvbiI6eyJsYXQiOjEzLjcyMjM5NSwibG5nIjoxMDAuNTU5NjQyfX0sImJyYW=
+5kIjoiYm9sdCJ9LCJpYXQiOjE3MzE2NzkyMTUsImV4cCI6MTc5NDc1MTIxNX0.pIDqZVgfHFaB-=
+BC2tmjV9iOQB4HU6Jtd9jtHSADBOkE"
+                                                                           =
+ width=3D"100%" />
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!-- // Route Map -->
+
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+                                                        style=3D"border-col=
+lapse: collapse;">
+                                                        <tr>
+                                                            <td class=3D"ro=
+utePoints" valign=3D"top"
+                                                                style=3D"ba=
+ckground: url(https://static.bolt.eu/email/images/46-image-578.png) top -6p=
+x left no-repeat; background-size: 24px; width: 24px;">
+                                                            </td>
+                                                            <td valign=3D"c=
+enter"
+                                                                class=3D"bo=
+dyLarge color-contentPrimary routePoints-text">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0"
+                                                                    cellspa=
+cing=3D"0" style=3D"border-collapse: collapse;">
+                                                                    <tr>
+                                                                        <td
+                                                                           =
+ class=3D"bodySmall spacing-bottom-4 color-contentSecondary">
+                                                                           =
+ <span>Pickup:</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+ class=3D"color-contentPrimary">
+                                                                           =
+ <span>36/25 =E0=B8=8B=E0=B8=AD=E0=B8=A2 =E0=B8=9E=E0=B8=A3=E0=B9=89=E0=B8=
+=AD=E0=B8=A1=E0=B8=A1=E0=B8=B4=E0=B8=95=E0=B8=A3, Krung Thep Maha Nakhon 10=
+110</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                            <td valign=3D"b=
+ottom" align=3D"right"
+                                                                class=3D"bo=
+dyLarge color-contentSecondary"
+                                                                style=3D"wi=
+dth: 48px; padding: 0 16px 17px 16px;">
+                                                                <span
+                                                                    style=
+=3D"word-break: keep-all;">20:33</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=3D"ro=
+utePoints" valign=3D"top"
+                                                                style=3D"ba=
+ckground: url(https://static.bolt.eu/email/images/46-image-576.png) bottom =
+12px left no-repeat; background-size: 24px; padding-bottom: 24px; width: 24=
+px;">
+                                                            </td>
+                                                            <td valign=3D"c=
+enter"
+                                                                class=3D"bo=
+dyLarge color-contentPrimary routePoints-text">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0"
+                                                                    cellspa=
+cing=3D"0" style=3D"border-collapse: collapse;">
+                                                                    <tr>
+                                                                        <td
+                                                                           =
+ class=3D"bodySmall spacing-bottom-4 color-contentSecondary">
+                                                                           =
+ <span>Dropoff:</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+ class=3D"color-contentPrimary">
+                                                                           =
+ <span>Queen Sirikit National Convention Centre, Klong Toei Khwaeng, Khlong=
+ Toei</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+
+                                                            </td>
+                                                            <td valign=3D"b=
+ottom" class=3D"bodyLarge color-contentSecondary"
+                                                                align=3D"ri=
+ght"
+                                                                style=3D"wi=
+dth: 48px; padding: 0 16px 17px 16px;">
+                                                                <span
+                                                                    style=
+=3D"word-break: keep-all;">20:44</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!-- Element Divider --=
+>
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" width=3D"100%"
+                                                                style=3D"pa=
+dding-bottom: 16px;">
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+                                                                    width=
+=3D"100%" id=3D"elementDivider4" height=3D"1"
+                                                                    style=
+=3D"height: 1px;">
+                                                                    <tr>
+                                                                        <td=
+ align=3D"center" valign=3D"top"
+                                                                           =
+ bgcolor=3D"#F0F2F5" width=3D"100%"
+                                                                           =
+ style=3D"background-color:#F0F2F5; height: 1px;">
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!-- // Element Divider=
+ -->
+
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr class=3D"spacin=
+g-bottom-16">
+                                                            <td rowspan=3D"=
+2" width=3D"56" class=3D"spacing-bottom-16">
+                                                                <img width=
+=3D"40" height=3D"40" src=3D"https://static.bolt.eu/email/images/46-image-2=
+40625.png"
+                                                                    alt=3D"=
+Driver photo" style=3D"display: block;">
+                                                            </td>
+                                                            <td
+                                                                class=3D"bo=
+dySmall spacing-bottom-4 color-contentSecondary">
+                                                                <span>Your =
+driver</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=3D"sp=
+acing-bottom-16">
+                                                                <span
+                                                                    class=
+=3D"bodyLarge color-contentPrimary">=E0=B8=A8=E0=B8=B1=E0=B8=81=E0=B8=94=E0=
+=B8=B4=E0=B9=8C=E0=B8=94=E0=B8=B2 =E0=B9=81=E0=B8=81=E0=B8=A1=E0=B8=81=E0=
+=B8=A5=E0=B9=89=E0=B8=B2</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <!-- Element Divider --=
+>
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" width=3D"100%"
+                                                                style=3D"pa=
+dding-bottom: 16px;">
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+                                                                    width=
+=3D"100%" id=3D"elementDivider4" height=3D"1"
+                                                                    style=
+=3D"height: 1px;">
+                                                                    <tr>
+                                                                        <td=
+ align=3D"center" valign=3D"top"
+                                                                           =
+ bgcolor=3D"#F0F2F5" width=3D"100%"
+                                                                           =
+ style=3D"background-color:#F0F2F5; height: 1px;">
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!-- // Element Divider=
+ -->
+
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr class=3D"spacin=
+g-bottom-32">
+                                                            <td
+                                                                class=3D"bo=
+dySmall spacing-bottom-40-sm color-contentSecondary">
+                                                                <span>00:11=
+:34</span>
+                                                                =E2=80=A2
+                                                                <span>4 km<=
+/span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- End of ride details -->
+
+                                        <!-- Give Get Banner-->
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0"
+                                            style=3D"border-collapse:collap=
+se;border-spacing:0;word-break:break-word;mso-table-lspace:0pt !important;m=
+so-table-rspace:0pt !important;-ms-text-size-adjust:100%;-webkit-text-size-=
+adjust:100%;">
+                                            <tr>
+                                                <td style=3D"padding-left:1=
+6px;padding-right:16px;">
+                                                    <table width=3D"100%" b=
+gcolor=3D"#E3FDED" border=3D"0" class=3D"promo"
+                                                        cellpadding=3D"0" c=
+ellspacing=3D"0"
+                                                        style=3D"border-col=
+lapse:collapse;border-radius:8px;border-spacing:0;word-break:break-word;mso=
+-table-lspace:0pt !important;mso-table-rspace:0pt !important;-ms-text-size-=
+adjust:100%;-webkit-text-size-adjust:100%;background-color:#249E64;">
+                                                        <tr>
+                                                            <td class=3D"sp=
+acing-outer-24"
+                                                                style=3D"pa=
+dding-top:24px;padding-bottom:0px;padding-right:24px;padding-left:24px;">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0"
+                                                                    cellspa=
+cing=3D"0"
+                                                                    style=
+=3D"border-collapse:collapse;border-spacing:0;word-break:break-word;mso-tab=
+le-lspace:0pt !important;mso-table-rspace:0pt !important;-ms-text-size-adju=
+st:100%;-webkit-text-size-adjust:100%;position:relative;">
+                                                                    <tr>
+                                                                        <td=
+ style=3D"padding-bottom:16px;">
+                                                                           =
+ <span
+                                                                           =
+     class=3D"heading color-contentPrimaryInverted"
+                                                                           =
+     style=3D"color:#FFFFFF;font-size:28px;font-weight:bold;line-height:36p=
+x;font-family:'Euclid Circular B', Arial, Avenir, Helvetica, Verdana, sans-=
+serif;font-style:normal;">
+                                                                           =
+     Sharing is caring
+                                                                           =
+ </span>
+                                                                        </t=
+d>
+                                                                        <td=
+ style=3D"padding-bottom:16px; float: right;"
+                                                                           =
+ class=3D"giveGetImg">
+                                                                           =
+ <a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Finvi=
+te.bolt.eu%2F1SJS36/1/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91=
+-000000/dHW1foJr7kc6-bb_BRGE8raBoLM=3D181"
+                                                                           =
+     class=3D"link"
+                                                                           =
+     style=3D"text-decoration:none !important;"><img
+                                                                           =
+         src=3D"https://static.bolt.eu/email/images/46-image-546.png" borde=
+r=3D"0"
+                                                                           =
+         width=3D"24" height=3D"24" alt=3D"Info"
+                                                                           =
+         class=3D"bodySmall color-contentPrimaryInverted img"
+                                                                           =
+         style=3D"-ms-interpolation-mode:bicubic;border-width:0;outline-sty=
+le:none;text-decoration:none;color:#FFFFFF;font-size:14px;font-weight:norma=
+l;line-height:20px;font-family:'Euclid Circular B', Arial, Avenir, Helvetic=
+a, Verdana, sans-serif;font-style:normal;display:block;" /></a>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+>
+                                                                           =
+ <span
+                                                                           =
+     class=3D"bodyLarge color-contentPrimaryInverted"
+                                                                           =
+     style=3D"color:#FFFFFF;font-size:18px;font-weight:normal;line-height:2=
+4px;font-family:'Euclid Circular B', Arial, Avenir, Helvetica, Verdana, san=
+s-serif;font-style:normal;">
+                                                                           =
+     Let your friends experience fast, affordable rides with Bolt!
+                                                                           =
+ </span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+ align=3D"left" valign=3D"center">
+                                                                           =
+ <table bgcolor=3D"#FFFFFF" cellpadding=3D"0"
+                                                                           =
+     cellspacing=3D"0"
+                                                                           =
+     style=3D"border-collapse:collapse;border-radius:4px;background-color:#=
+FFFFFF;background-image:none;background-repeat:repeat;background-position:t=
+op left;background-attachment:scroll;border-spacing:0;word-break:break-word=
+;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;-ms-text-s=
+ize-adjust:100%;-webkit-text-size-adjust:100%;width:unset;margin-bottom:24p=
+x;margin-top:16px;">
+                                                                           =
+     <tr>
+                                                                           =
+         <td align=3D"middle" valign=3D"bottom"
+                                                                           =
+             style=3D"padding-top:8px;padding-bottom:8px;padding-left:24px;=
+padding-right:24px;">
+                                                                           =
+             <table border=3D"0"
+                                                                           =
+                 cellpadding=3D"0"
+                                                                           =
+                 cellspacing=3D"0"
+                                                                           =
+                 style=3D"border-collapse:collapse;text-align:center;border=
+-spacing:0;word-break:break-word;mso-table-lspace:0pt !important;mso-table-=
+rspace:0pt !important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:10=
+0%;">
+                                                                           =
+                 <tr>
+                                                                           =
+                     <td class=3D"caption color-contentSecondary"
+                                                                           =
+                         style=3D"color:#818391;font-size:12px;font-weight:=
+normal;line-height:16px;font-family:'Euclid Circular B', Arial, Avenir, Hel=
+vetica, Verdana, sans-serif;font-style:normal;">
+                                                                           =
+                         <span>Your code</span>
+                                                                           =
+                     </td>
+                                                                           =
+                 </tr>
+                                                                           =
+                 <tr>
+                                                                           =
+                     <td class=3D"bodyLargeBold color-contentPrimary"
+                                                                           =
+                         style=3D"color:#2F313F;font-size:18px;font-weight:=
+bold;line-height:24px;font-family:'Euclid Circular B', Arial, Avenir, Helve=
+tica, Verdana, sans-serif;font-style:normal;">
+                                                                           =
+                         <span>1SJS36</span>
+                                                                           =
+                     </td>
+                                                                           =
+                 </tr>
+                                                                           =
+             </table>
+                                                                           =
+         </td>
+                                                                           =
+     </tr>
+                                                                           =
+ </table>
+                                                                        </t=
+d>
+                                                                        <td=
+ align=3D"right" valign=3D"bottom"
+                                                                           =
+ style=3D"padding-bottom: 24px;"
+                                                                           =
+ class=3D"giveGetImg">
+                                                                           =
+ <img src=3D"https://static.bolt.eu/email/images/46-image-548.png" border=
+=3D"0"
+                                                                           =
+     alt=3D"GiveGet"
+                                                                           =
+     class=3D"bodySmall color-contentPrimaryInverted img"
+                                                                           =
+     style=3D"-ms-interpolation-mode:bicubic;border-width:0;outline-style:n=
+one;text-decoration:none;color:#FFFFFF;font-size:14px;font-weight:normal;li=
+ne-height:20px;font-family:'Euclid Circular B', Arial, Avenir, Helvetica, V=
+erdana, sans-serif;font-style:normal;display:block;" />
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <!-- End of Give Get Banner -->
+
+                                <!-- Space divider-->
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr>
+                                                <td height=3D"24px;" style=
+=3D"height: 24px;"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- End of Space divider -->
+
+
+                                <!-- Space divider-->
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr>
+                                                <td height=3D"24px;" style=
+=3D"height: 24px;"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- End of Space divider -->
+
+
+                                <!-- LINKS -->
+
+                                <!-- Invoice -->
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                            <table width=3D"100%" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                <tr>
+                                                    <td class=3D"spacing-ou=
+ter-sides" style=3D"padding-bottom: 0px;">
+                                                        <table width=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                            <tr>
+                                                                <td style=
+=3D"padding-top: 16px; padding-bottom: 16px;">
+                                                                    <table =
+width=3D"100%" border=3D"0" cellpadding=3D"0"
+                                                                        cel=
+lspacing=3D"0"
+                                                                        sty=
+le=3D"border-collapse: collapse;">
+                                                                        <tr=
+>
+                                                                           =
+ <td class=3D"bodyMedium color-linkPrimary">
+                                                                           =
+     <span><a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:=
+%2F%2Finvoice.taxify.eu%2F%3Fs=3D90b4859d-c995-4437-ac2c-66f9e8000870/1/010=
+70193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/24SuxZXU5XR0FZst3=
+Ok4w43mE8k=3D181">Download PDF invoice</a></span>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                    </table=
+>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                    </td>
+                                </tr>
+                                <!-- End of invoice -->
+
+
+
+                                <!-- Element Divider -->
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%">
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"100%" class=3D"spacing-outer-sides"
+                                                    style=3D"padding-top: 0=
+px; padding-bottom: 0px;">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%"
+                                                        id=3D"elementDivide=
+r5" height=3D"1" style=3D"height: 1px;">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" bgcolor=3D"#F0F2F5"
+                                                                width=3D"10=
+0%"
+                                                                style=3D"ba=
+ckground-color:#F0F2F5; height: 1px;"></td>
+                                                        </tr>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- // Element Divider -->
+
+                                <!-- Element Divider -->
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%">
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"100%" class=3D"spacing-outer-sides"
+                                                    style=3D"padding-top: 0=
+px; padding-bottom: 0px;">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%"
+                                                        id=3D"elementDivide=
+r5" height=3D"1" style=3D"height: 1px;">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" bgcolor=3D"#F0F2F5"
+                                                                width=3D"10=
+0%"
+                                                                style=3D"ba=
+ckground-color:#F0F2F5; height: 1px;"></td>
+                                                        </tr>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- // Element Divider -->
+
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <a href=3D"https://3zf1wp45.r.eu-ce=
+ntral-1.awstrack.me/L0/https:%2F%2Fbolt.onelink.me%2FsbJ2%2Fce134c74/1/0107=
+0193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/KkdU4M3qjLwP_EdrRV=
+WpyAWEKLI=3D181" style=3D"text-decoration: none;">
+                                            <table width=3D"100%" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                <tr>
+                                                    <td class=3D"spacing-ou=
+ter-sides"
+                                                        style=3D"padding-to=
+p: 0px; padding-bottom: 24px;">
+                                                        <table width=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                            <tr>
+                                                                <td style=
+=3D"padding-top: 16px; padding-bottom: 16px;">
+                                                                    <table =
+width=3D"100%" border=3D"0" cellpadding=3D"0"
+                                                                        cel=
+lspacing=3D"0"
+                                                                        sty=
+le=3D"border-collapse: collapse;">
+                                                                        <tr=
+>
+                                                                           =
+ <td class=3D"bodyMedium color-linkPrimary">
+                                                                           =
+     <span>Contact support</span>
+                                                                           =
+ </td>
+                                                                           =
+ <td align=3D"right"
+                                                                           =
+     class=3D"bodyLarge color-contentPrimary">
+                                                                           =
+     <img src=3D"https://static.bolt.eu/email/images/46-image-572.png" bord=
+er=3D"0"
+                                                                           =
+         width=3D"24" height=3D"24" alt=3D"Support"
+                                                                           =
+         class=3D"bodySmall color-contentSecondary img"
+                                                                           =
+         id=3D"imgSupport" />
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                    </table=
+>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <!-- End of LINKS -->
+
+                                <!-- Contact Support notice -->
+
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr class=3D"spacing-outer-32">
+                                                <td
+                                                    class=3D"bodySmall spac=
+ing-bottom-40-sm color-contentSecondary spacing-outer-sides ">
+                                                    <span>
+                                                        This is an automate=
+d email. If you need help, please
+                                                        <a href=3D"https://=
+3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Fbolt.onelink.me%2FsbJ2%2=
+Fce134c74/2/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/fE=
+9Xg6M-Cee07q6BOaiFJkFSdAM=3D181"
+                                                            style=3D"text-d=
+ecoration: none; font-size: 14px"
+                                                            class=3D"color-=
+linkPrimary">contact support here</a>
+                                                        instead of replying=
+ to this email.
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- // Contact Support notice -->
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!--/ Email Body -->
+
+                <!-- Email Footer -->
+
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" id=3D"footerWrapper" bgcolor=3D"#FFFFFF"
+                    style=3D"background-color:#FFFFFF; ">
+                    <tr>
+                        <td align=3D"center" valign=3D"top">
+                            <table border=3D"0" cellspacing=3D"0" width=3D"=
+600" id=3D"footerContainer">
+                                <tr>
+                                    <td align=3D"center" valign=3D"top" cla=
+ss=3D"spacing-outer spacing-bottom-40-sm">
+
+                                        <!-- Email Footer Content -->
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%"
+                                            id=3D"footerContent">
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%"
+                                                        class=3D"bodySmall =
+color-contentTertiary">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top">
+                                                                <span>
+                                                                    =E0=B8=
+=A8=E0=B8=B1=E0=B8=81=E0=B8=94=E0=B8=B4=E0=B9=8C=E0=B8=94=E0=B8=B2 =E0=B9=
+=81=E0=B8=81=E0=B8=A1=E0=B8=81=E0=B8=A5=E0=B9=89=E0=B8=B2</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" id=3D"footerWrapper" bgcolor=3D"#FFFFFF"
+                    style=3D"background-color:#FFFFFF; ">
+                    <tr>
+                        <td align=3D"center" valign=3D"top">
+                            <table border=3D"0" class=3D"spacing-outer" cel=
+lspacing=3D"0" width=3D"600" id=3D"footerContainer">
+                                <tr>
+                                    <td align=3D"center" valign=3D"top" cla=
+ss=3D"spacing-bottom-24">
+
+                                        <!-- Email Footer Content -->
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%"
+                                            id=3D"footerContent">
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top">
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%"
+                                                        id=3D"footerContent=
+Caption">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" class=3D"spacing-bottom-8">
+                                                                <span class=
+=3D"bodySmall color-contentSecondary">
+                                                                    Made wi=
+th
+                                                                    &#12815=
+4;
+                                                                    in Esto=
+nia</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%"
+                                                        id=3D"footerContent=
+Social">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"middle">
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+                                                                    width=
+=3D"initial">
+                                                                    <tr>
+                                                                        <td=
+ align=3D"center" valign=3D"middle" width=3D"40"
+                                                                           =
+ class=3D"imgWrapper">
+                                                                           =
+ <a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Fwww.=
+facebook.com%2Fbolt/1/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91=
+-000000/2Cgl_U_oQkEhlT6UsiSwYJOhgac=3D181"
+                                                                           =
+     class=3D"link"><img src=3D"https://static.bolt.eu/email/images/46-imag=
+e-573.png"
+                                                                           =
+         width=3D"24" height=3D"24"
+                                                                           =
+         alt=3D"Facebook"
+                                                                           =
+         class=3D"bodySmall color-contentSecondary img-social-link" /></a>
+                                                                        </t=
+d>
+
+                                                                        <td=
+ align=3D"center" valign=3D"middle" width=3D"40"
+                                                                           =
+ class=3D"imgWrapper">
+                                                                           =
+ <a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Fwww.=
+instagram.com%2Fbolt/1/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb9=
+1-000000/PXwf3uSvE8tnrYjB7nZKDp2EIRI=3D181"
+                                                                           =
+     class=3D"link"><img src=3D"https://static.bolt.eu/email/images/46-imag=
+e-574.png"
+                                                                           =
+         width=3D"24" height=3D"24"
+                                                                           =
+         alt=3D"Instagram"
+                                                                           =
+         class=3D"bodySmall color-contentSecondary img-social-link" /></a>
+                                                                        </t=
+d>
+
+                                                                        <td=
+ align=3D"center" valign=3D"middle" width=3D"40"
+                                                                           =
+ class=3D"imgWrapper">
+                                                                           =
+ <a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Ftwit=
+ter.com%2Fboltapp/1/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-0=
+00000/HYhr_UF6UgorbuQyxb6UDXYrIys=3D181"
+                                                                           =
+     class=3D"link"><img src=3D"https://static.bolt.eu/email/images/46-imag=
+e-575.png"
+                                                                           =
+         width=3D"24" height=3D"24" alt=3D"Twitter"
+                                                                           =
+         class=3D"bodySmall color-contentSecondary img-social-link" /></a>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- // Email Footer Content -->
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!--/ Email Footer -->
+
+            </td>
+        </tr>
+    </table>
+    <div style=3D"display:none;">
+     =20
+    </div>
+    <img src=3D"https://node.bolt.eu/email-internal/pixel?id=3D8f9ce700bc4f=
+425850fc532c155ace7f4cb524f62a29cdbe478cb7176748605a841a4f37b310.gif" style=
+=3D"width:1px;height:1px;"/>
+<img alt=3D"" src=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/I0/0107019=
+3301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/T6qLEYtFJGoZhPclz4k3A=
+R616_g=3D181" style=3D"display: none; width: 1px; height: 1px;">
+</body>
+
+</html>

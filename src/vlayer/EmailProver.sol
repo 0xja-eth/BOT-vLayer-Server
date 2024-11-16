@@ -57,7 +57,7 @@ contract EmailProver is Prover, Ownable {
 //        ProvedEmail memory pEmail = ProvedEmail(proof(), email.to, date, pickupTime, dropoffTime);
 //        provedEmails.push(pEmail);
 
-        return (proof(), email.to, date, pickupTime, dropoffTime);
+        return (proof(), toEmail, date, pickupTime, dropoffTime);
     }
 }
 

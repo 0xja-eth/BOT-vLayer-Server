@@ -3,7 +3,7 @@
     "seal": {
       "verifierSelector": "0xdeafbeef",
       "seal": [
-        "0xe7146218708bc7dc24630a4504701422d7d5c744a49302295a2416ba31727311",
+        "0xc571d6f993ee646871d1fc4d23ce7a1f463091c38cc32ec09417fb9b7e02c22c",
         "0x0000000000000000000000000000000000000000000000000000000000000000",
         "0x0000000000000000000000000000000000000000000000000000000000000000",
         "0x0000000000000000000000000000000000000000000000000000000000000000",
@@ -18,12 +18,12 @@
     "length": 1024,
     "callAssumptions": {
       "functionSelector": "0xeea5a2e0",
-      "proverContractAddress": "0x14a037b0977ae89b06de08a31ef8542be465fba2",
-      "settleBlockNumber": 19765333,
-      "settleBlockHash": "0x6313528c5197ae0b0b350d53dbc71e0dec5288569557a7722d83e6d9b1c77a1f"
+      "proverContractAddress": "0x759f00caff8faf2d81d15e6c6fc403ce90e01583",
+      "settleBlockNumber": 19765668,
+      "settleBlockHash": "0x7514a81c9abb88d5f4427bbc423ea0e5d57fd9facfe475fefc201f7ee56375cf"
     }
   },
-  "Li <0xja.eth@gmail.com>",
+  "^.*?0xja.eth@gmail.com.*?$",
   "15 November 2024",
   "20:33",
   "20:44"
