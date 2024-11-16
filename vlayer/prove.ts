@@ -14,10 +14,13 @@ import verifierSpec from "../out/EmailProofVerifier.sol/EmailProofVerifier";
 const mimeEmail = fs.readFileSync("./testdata/bolt-email.eml").toString();
 const unverifiedEmail = await preverifyEmail(mimeEmail);
 
+const platformAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512" // Devnet
+
 const { prover, verifier } = await deployVlayerContracts({
   proverSpec,
   verifierSpec,
-  verifierArgs: []
+  proverArgs: [],
+  verifierArgs: [platformAddress]
 });
 
 const config = getConfig();
@@ -41,7 +44,7 @@ const hash = await vlayer.prove({
   args: [unverifiedEmail, "^.*?0xja\\.eth@gmail\\.com.*?$", "20:33", "20:44"],
 });
 const result = await vlayer.waitForProvingResult(hash);
-console.log("Proof:", result[0]);
+console.log("Proof:", result);
 
 console.log("Verifying...");
 

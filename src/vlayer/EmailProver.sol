@@ -23,6 +23,7 @@ contract EmailProver is Prover, Ownable {
     struct ProvedEmail {
         Proof proof;
         string toEmail;
+        string date;
         string pickupTime;
         string dropoffTime;
     }
@@ -35,23 +36,24 @@ contract EmailProver is Prover, Ownable {
     }
 
     function main(UnverifiedEmail calldata unverifiedEmail,
-        string memory to, string memory pickupTime, string memory dropoffTime
-    ) public view returns (Proof memory, address, string memory, string memory) {
+        string memory to, string memory date, string memory pickupTime, string memory dropoffTime
+    ) public view returns (Proof memory, address, string memory, string memory, string memory) {
         VerifiedEmail memory email = unverifiedEmail.verify();
 
 //        require(email.from.matches(targetDomain), "Email not from the bolt");
         require(email.to.matches(to), "Email not to the expected address");
 
-        string[] memory captures = email.body.capture("^[\\s\\S]*<span>Pickup:</span>[\\s\\S]*?<span[^>]*>([\\d:]+)</span>[\\s\\S]*?<span>Dropoff:</span>[\\s\\S]*?<span[^>]*>([\\d:]+)</span>[\\s\\S]*$");
+        string[] memory captures = email.body.capture("^[\\s\\S]*&#44; (\\d{1,2} (January|February|March|April|May|June|July|August|September|October|November|December) \\d{4})<\\/span>[\\s\\S]*<span>Pickup:<\\/span>[\\s\\S]*?<span[^>]*>([\\d:]+)<\\/span>[\\s\\S]*?<span>Dropoff:<\\/span>[\\s\\S]*?<span[^>]*>([\\d:]+)<\\/span>[\\s\\S]*$");
 
-        require(captures.length == 3, "Subject must match the expected pattern");
-        require(captures[1].equal(pickupTime), "Pickup time not match");
-        require(captures[2].equal(dropoffTime), "Dropoff time not match");
+        require(captures.length == 5, "Subject must match the expected pattern");
+        require(captures[1].equal(date), "Date not match");
+        require(captures[3].equal(pickupTime), "Pickup time not match");
+        require(captures[4].equal(dropoffTime), "Dropoff time not match");
 
-        ProvedEmail memory pEmail = ProvedEmail(proof(), email.to, pickupTime, dropoffTime);
+        ProvedEmail memory pEmail = ProvedEmail(proof(), email.to, date, pickupTime, dropoffTime);
         provedEmails.push(pEmail);
 
-        return (pEmail.proof, pEmail.to, pEmail.pickupTime, pEmail.dropoffTime);
+        return (pEmail.proof, pEmail.to, pEmail.date, pEmail.pickupTime, pEmail.dropoffTime);
     }
 }
 

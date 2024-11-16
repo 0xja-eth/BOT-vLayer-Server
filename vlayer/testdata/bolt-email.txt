@@ -1,0 +1,1917 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=no;" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+    <title>Rider Receipt Email</title>
+
+    <style type="text/css">
+        #bodyTable {
+            height: 100% !important;
+            width: 100% !important;
+
+margin: 0;
+            padding: 0
+        }
+
+        a img,
+        img {
+            border: 0;
+            outline: 0;
+            text-decoration: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            word-break: break-word
+        }
+
+        .mp0 {
+            margin: 0 !important;
+            padding: 0 !important
+        }
+
+        table {
+            mso-table-lspace: 0 !important;
+            mso-table-rspace: 0 !important
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic
+        }
+
+        #bodyTable,
+        body,
+        table {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%
+        }
+
+        .color-contentPrimary {
+            color: #2f313f
+        }
+
+        .color-contentSecondary {
+            color: #818391
+        }
+
+        .color-contentTertiary {
+            color: #a9abb9
+        }
+
+        .color-contentPrimaryInverted {
+            color: #fff
+        }
+
+        .color-linkPrimary,
+        .color-linkPrimary:visited {
+            color: #249e64 !important
+        }
+
+        .color-yellowBackground {
+            background-color: #fff8d6
+        }
+
+        .color-green700 {
+            color: #249e64
+        }
+
+        .color-green900 {
+            color: #186841
+        }
+
+        .color-accentPurple {
+            color: #5b68f6
+        }
+
+        .color-red700 {
+            color: #c91d2b
+        }
+
+        .link,
+        a {
+            text-decoration: none !important;
+            color: #249e64;
+        }
+
+        .headingLarge {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 44px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Verdana, sans-serif;
+            font-style: normal
+        }
+
+        .heading {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 36px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Verdana, sans-serif;
+            font-style: normal
+        }
+
+        .headingXS {
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Verdana, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        .bodyLarge {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Verdana, sans-serif;
+
+font-style: normal
+        }
+
+        .bodyLargeBold {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 24px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Verdana, sans-serif;
+            font-style: normal
+        }
+
+        .bodyMedium {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Verdana, sans-serif;
+            font-style: normal
+        }
+
+        .bodyMediumBold {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Verdana, sans-serif;
+            font-style: normal
+        }
+
+        .bodySmall {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Verdana, sans-serif;
+            font-style: normal
+        }
+
+        .bodyXS {
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Verdana, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        .caption {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Verdana, sans-serif;
+            font-style: normal
+        }
+
+        .captionBold {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 16px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Verdana, sans-serif;
+            font-style: normal
+        }
+
+        @media only screen and (max-width:600px) {
+            .headingLarge {
+                font-size: 28px !important;
+                line-height: 36px !important
+            }
+
+            .bodyLarge {
+                font-size: 16px !important
+            }
+
+            .bodyLargeBold {
+                font-size: 16px !important
+            }
+        }
+
+        .height-40 {
+            height: 40px
+        }
+
+        .spacing-outer {
+            padding-top: 40px;
+            padding-right: 40px;
+            padding-left: 40px
+        }
+
+        .spacing-outer-carbon-neutral-banner {
+
+  padding-top: 40px;
+            padding-right: 0;
+            padding-left: 40px;
+            padding-bottom: 40px
+        }
+
+        .spacing-outer-safety-banner {
+            padding: 40px
+        }
+
+        .spacing-outer-giveget-banner {
+            padding: 24px
+        }
+
+        .routePoints-text {
+            padding: 0 16px 17px 16px
+        }
+
+        .spacing-outer-sides {
+            padding-right: 40px;
+            padding-left: 40px
+        }
+
+        .spacing-outer-32 {
+            padding-top: 32px;
+            padding-right: 40px;
+            padding-left: 40px
+        }
+
+        .spacing-outer-16 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-right: 16px;
+            padding-left: 16px
+        }
+
+        .spacing-outer-24 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-right: 24px;
+            padding-left: 24px
+        }
+
+        .spacing-outer-label {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 16px;
+
+  padding-right: 16px
+        }
+
+        .spacing-inner-label {
+            padding-top: 12px;
+
+  padding-left: 16px;
+            padding-right: 16px
+        }
+
+        .spacing-outer-promo {
+
+   padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 24px;
+            padding-right: 24px
+        }
+
+        .spacing-bottom-40,
+        .spacing-bottom-40-sm {
+            padding-bottom: 40px
+        }
+
+        .spacing-bottom-24 {
+            padding-bottom: 24px
+        }
+
+        .spacing-bottom-16 {
+            padding-bottom: 16px
+        }
+
+        .spacing-bottom-16-sm {
+
+   padding-bottom: 16px
+        }
+
+        .spacing-bottom-8 {
+            padding-bottom: 8px
+        }
+
+        .spacing-bottom-4 {
+            padding-bottom: 4px
+        }
+
+        .spacing-top-8-sm {
+            padding-top: 8px
+        }
+
+        .spacing-car-image {
+            padding-right: 40px;
+        }
+
+        .container-border-top {
+            display: block;
+            border-top: 0;
+
+   border-right: 1px solid #e9eaee;
+            border-bottom: 0;
+            border-left: 1px solid #e9eaee
+        }
+
+        .container-border {
+            border-top: 0;
+            border-right: 1px solid #e9eaee;
+            border-bottom: 0;
+            border-left: 1px solid #e9eaee
+        }
+
+
+        .container-border-bottom {
+            display: block;
+            border-top: 0;
+            border-right: 1px solid #e9eaee;
+            border-bottom: 1px solid #e9eaee;
+            border-left: 1px solid #e9eaee;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 16px;
+            border-bottom-left-radius: 16px
+        }
+
+        .comment-spacing {
+            padding-top: 4px
+        }
+
+        .label {
+            padding-top: 8px;
+            padding-bottom: 4px
+        }
+
+        .img {
+            display: block
+        }
+
+        .img-social-link {
+            display: block;
+            padding-top: 8px;
+            padding-right: 8px;
+            padding-bottom: 8px;
+            padding-left: 8px
+        }
+
+        .safety-banner-image {
+            width: 96px;
+
+   height: 96px
+        }
+
+        .giveget-banner-image {
+            width: 160px;
+            height: 108px
+        }
+
+        .banner-spacing {
+            padding-right: 112px;
+            padding-bottom: 0
+        }
+
+        @media only screen and (max-width:600px) {
+
+            #bodyContainer,
+
+   #footerContainer,
+            #headerContainer {
+                width: 100% !important
+            }
+
+            .routePoints {
+                display: none
+            }
+
+            .spacing-outer {
+                padding-top: 24px !important;
+                padding-right: 16px !important;
+                padding-left: 16px !important
+            }
+
+            .spacing-outer-sides {
+                padding-right: 16px !important;
+                padding-left: 16px !important
+            }
+
+            .spacing-outer-32 {
+                padding-top: 28px !important;
+                padding-right: 16px !important;
+                padding-left: 16px !important
+            }
+
+            .spacing-outer-24 {
+                padding-top: 0;
+                padding-bottom: 0;
+                padding-right: 16px !important;
+                padding-left: 16px !important
+            }
+
+            .spacing-outer-16 {
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+                padding-right: 0 !important;
+                padding-left: 0 !important
+            }
+
+            .spacing-bottom-16-sm {
+                padding-bottom: 12px !important
+            }
+
+            .spacing-top-8-sm {
+                padding-top: 4px !important
+            }
+
+            .spacing-bottom-40-sm {
+                padding-bottom: 24px !important
+
+ }
+
+            .spacing-outer-carbon-neutral-banner {
+                padding-top: 40px !important;
+                padding-right: 0 !important;
+                padding-left: 16px !important;
+                padding-bottom: 40px !important
+            }
+
+            .spacing-outer-safety-banner {
+                padding-top: 24px !important;
+                padding-right: 24px !important;
+                padding-left: 24px !important;
+                padding-bottom: 24px !important
+            }
+
+            .routePoints-text {
+
+  padding: 8px 0 !important
+            }
+
+            .container-border-bottom,
+            .container-border,
+            .container-border-top {
+                border: 0 !important;
+                border-radius: 0 !important
+            }
+
+            .container-border-bottom {
+                border-bottom: 1px solid #f4f4f6 !important
+            }
+
+            .banner-spacing {
+                padding-right: 20px !important
+            }
+
+            .spacing-car-image {
+                padding-right: 16px !important
+
+   }
+
+            .giveGetImg {
+                display: none;
+            }
+
+            .notOnMobile {
+                display: none;
+            }
+        }
+
+        /* GMAIL FIXES */
+        @media only screen and (max-width: 480px) {
+
+            u~div,
+            u+#body {
+                min-width: 100% !important;
+            }
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div style="display:none; max-height: 0px; overflow: hidden;">
+        Thanks for choosing Bolt — here's your ride receipt!
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        <wbr>&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        <wbr>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="bodyTable">
+        <tr>
+            <td align="center" valign="top" width="100%" style="width:100%; max-width:100%; min-width:100%;">
+
+                <!-- Email Header -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="headerWrapper"
+                    bgcolor="#249E64"
+                    style="background-color:#249E64; ">
+                    <tr>
+                        <td align="center" valign="top">
+                            <table border="0" cellpadding="16" cellspacing="0" width="602" id="headerContainer">
+                                <tr>
+                                    <td align="center" valign="top" class="spacing-outer container-border-top">
+
+                                        <!-- Email Header Content -->
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                            id="headerContent">
+                                            <tr>
+                                                <td align="center" valign="top">
+
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                                        id="headerContentLogo" style="max-width:100%; min-width:100%;">
+                                                        <tr>
+                                                            <td align="left">
+
+                       <img src="https://static.bolt.eu/email/images/46-image-554.png" border="0" width="56"
+                                                                    height="32" alt="Bolt"
+
+                                            class="bodySmall color-contentPrimaryInverted img"
+
+                                                id="imgLogo" />
+
+         </td>
+                                                            <td align="right">
+
+
+                                                  <table border="0" cellpadding="0" cellspacing="0"
+
+                                                         width="100%" id="headerContentHeading">
+
+                                                    <tr>
+
+            <td align="right">
+                                                                            <span
+                                                                                class="caption color-contentPrimaryInverted">Total:
+                                                                            </span>
+
+                                                             <span
+
+                              class="captionBold color-contentPrimaryInverted">฿55.00</span>
+
+                                                  </td>
+
+       </tr>
+                                                                    <tr>
+
+                                            <td align="right">
+
+                        <span
+                                                                                class="caption color-contentPrimaryInverted">Friday&#44; 15 November 2024</span>
+
+                               </td>
+                                                                    </tr>
+                                                                </table>
+
+             </td>
+
+                                                        </tr>
+
+                           <tr>
+                                                            <td class="height-40" colspan="2"></td>
+                                                        </tr>
+
+                   </table>
+
+                                                    <!-- if [$email_subscription_disclaimer] is not empty -->
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                                        id="headerContentHeading">
+                                                        <tr>
+
+      <td align="left" valign="top" class="spacing-bottom-16">
+
+                <h1
+                                                                    class="headingLarge color-contentPrimaryInverted mp0">
+                                                                    Thanks for riding with us, Li</h1>
+                                                            </td>
+
+                      </tr>
+                                                        <tr>
+
+                                   <td align="left" valign="top">
+
+                 <span
+                                                                    class="bodyLarge color-contentPrimaryInverted">We hope you enjoyed your ride</span>
+
+   </td>
+                                                        </tr>
+
+         </table>
+                                                </td>
+
+  </tr>
+                                        </table>
+                                        <!-- // Email Header Content -->
+                                    </td>
+                                </tr>
+
+             </table>
+                        </td>
+                    </tr>
+                </table>
+                <!--/ Email Header -->
+
+                <!-- Image Header -->
+                <table cellPadding="0" cellSpacing="0"
+                    style="border-width:0;--ms-text-style-adjust:100%;--webkit-text-size-adjust:100%;width:100%;max-width:100%;min-width:100%;">
+                    <tbody>
+                        <tr>
+                            <td valign="top">
+                                <table cellPadding="1" cellSpacing="0"
+                                    style="border-width:0;--ms-text-style-adjust:100%;--webkit-text-size-adjust:100%;width:100%;max-width:100%;min-width:100%;">
+                                    <tr>
+
+                <td valign="top" style="padding:0">
+                                            <div
+
+                                       style="height: 56px; background-color:#249E64">
+
+                </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td align="center" valign="top" width="600px" valign="top" class="container-border"
+                                style="width: 600px;" height="112">
+
+                                <!--[if gte mso 9]>
+                  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px; height:112px;" fillcolor="#249E64">
+                  <v:fill type="gradient" color2="#249E64" colors="0% #FFFFFF, 51% #FFFFFF, 51% #249E64" position="0, 0" origin="0, 0" />
+                  <v:textbox inset="0,0,0,0">
+
+<![endif]-->
+                                <table cellPadding="0" cellSpacing="0" width="600px"
+
+                          style="--ms-text-style-adjust:100%;--webkit-text-size-adjust:100%;width:100%;box-sizing: border-box;">
+                                    <tbody>
+                                        <tr>
+
+                                 <td width="600" valign="top" align="right">
+
+              <div
+                                                    style="height: 56px; background-color:#249E64">
+                                                     <img
+
+    src="https://static.bolt.eu/email/images/46-image-539.png"
+
+    height="112" alt="Car" class="spacing-car-image" />
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                     </tbody>
+                                </table>
+                                <!--[if gte mso 9]>
+                              </v:textbox>
+                            </v:rect>
+
+       <![endif]-->
+                            </td>
+                            <td valign="top">
+
+                       <table cellPadding="1" cellSpacing="0"
+                                    style="border-width:0;--ms-text-style-adjust:100%;--webkit-text-size-adjust:100%;width:100%;max-width:100%;min-width:100%;">
+                                    <tr>
+                                        <td valign="top" style="padding:0">
+                                            <div
+                                                style="height: 56px; background-color:#249E64">
+                                            </div>
+
+         </td>
+                                    </tr>
+                                </table>
+
+               </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--/ Image Header -->
+
+                <!-- Email Body -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="bodyWrapper" bgcolor="#FFFFFF"
+                    style="background-color:#FFFFFF; ">
+                    <tr>
+                        <td align="center" valign="top">
+                            <table border="0" cellpadding="0" cellspacing="0" width="602" id="bodyContainer"
+                                class="container-border-bottom">
+
+                                <tr>
+                                    <td align="center" valign="top">
+
+
+<!-- Info Labels -->
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td class="spacing-outer-sides"
+                                                    style="padding-top: 24px; padding-bottom: 24px;">
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                        <tr>
+
+                                  <!-- Label notification -->
+
+     <!-- /Label notification -->
+                                                        </tr>
+
+                                      <tr>
+                                                            <!-- Label success -->
+                                                            <!-- /Label success -->
+
+                                   </tr>
+                                                        <tr>
+
+                                                <!-- Label error -->
+
+            <!--/ Label error -->
+                                                        </tr>
+
+                                      <tr>
+                                                            <!-- Label discount -->
+                                                            <!--/ Label discount -->
+
+                                     </tr>
+                                                    </table>
+
+                                      </td>
+                                            </tr>
+
+                    </table>
+                                        <!--/ Info Labels-->
+
+
+                    <!-- Total row -->
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+
+                 <td class="spacing-outer-sides">
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td class="spacing-bottom-16-sm spacing-top-8-sm">
+                                                                <table width="100%" border="0" cellpadding="0"
+                                                                    cellspacing="0" style="border-collapse: collapse;">
+                                                                    <tr>
+
+                                     <td class="heading color-contentPrimary">
+
+                                        <span>Total</span>
+
+              </td>
+                                                                        <td align="right"
+                                                                            class="heading color-contentPrimary">
+                                                                            <span>฿55.00</span>
+
+                                                </td>
+
+     </tr>
+                                                                </table>
+
+                              </td>
+                                                        </tr>
+
+                                    </table>
+                                                </td>
+
+                             </tr>
+                                        </table>
+
+          <!-- /Total row -->
+
+                                        <!-- Details -->
+
+                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+                <tr>
+                                                <td class="spacing-outer-sides"
+
+                                         style="padding-top: 16px; padding-bottom: 0px;">
+
+                           <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+                                      <tr>
+                                                            <td class="spacing-bottom-16">
+                                                                <table width="100%" border="0" cellpadding="0"
+                                                                    cellspacing="0" style="border-collapse: collapse;">
+                                                                    <tr>
+
+                                                         <td class="bodyLarge color-contentPrimary">
+
+                                                              <span>Fare</span>
+
+                                   </td>
+                                                                        <td align="right"
+                                                                            class="bodyLarge color-contentPrimary">
+                                                                            <span>฿55.00</span>
+                                                                        </td>
+
+                            </tr>
+                                                                    <tr>
+                                                                        <td
+
+                            class="bodySmall color-contentSecondary comment-spacing">
+
+                                               <span></span>
+
+                </td>
+                                                                    </tr>
+
+                                              </table>
+                                                            </td>
+                                                        </tr>
+
+    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- / Details -->
+
+                                        <!-- Element Divider -->
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td align="center" valign="top" width="100%" class="spacing-outer-sides"
+                                                    style="padding-top: 0px; padding-bottom: 0px;">
+
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                                        id="elementDivider2" height="1" style="height: 1px;">
+                                                        <tr>
+
+         <td align="center" valign="top" bgcolor="#F0F2F5"
+
+            width="100%"
+                                                                style="background-color:#F0F2F5; height: 1px;"></td>
+                                                        </tr>
+
+                             </table>
+
+                                                </td>
+
+                          </tr>
+                                        </table>
+
+       <!-- // Element Divider -->
+
+                                        <!-- Detailed reciept -->
+
+                               <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+                              <tr>
+                                                <td class="spacing-outer-sides"
+                                                    style="padding-top: 16px; padding-bottom: 0px;">
+
+
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                        <tr>
+
+        <td>
+                                                                <table width="100%" border="0" cellpadding="0"
+                                                                    cellspacing="0" style="border-collapse: collapse;">
+                                                                    <tr>
+
+                                                   <td class="bodyLarge color-contentPrimary">
+
+                                                        <span>Total</span>
+
+                              </td>
+                                                                        <td align="right"
+                                                                            class="bodyLarge color-contentPrimary">
+                                                                            <span>฿55.00</span>
+                                                                        </td>
+
+                       </tr>
+                                                                </table>
+
+                                                </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                            <!-- / Discount -->
+
+                                        <!-- Element Divider -->
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td align="center" valign="top" width="100%" class="spacing-outer-sides"
+                                                    style="padding-top: 0px; padding-bottom: 0px;">
+
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                                        id="elementDivider6" height="1" style="height: 1px;">
+                                                        <tr>
+                                                            <td align="center" valign="top" bgcolor="#F0F2F5"
+                                                                width="100%"
+
+                         style="background-color:#F0F2F5; height: 1px;"></td>
+
+                   </tr>
+                                                    </table>
+
+
+                        </td>
+                                            </tr>
+
+      </table>
+                                        <!-- // Element Divider -->
+
+
+             <!-- Total charged -->
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+
+              <td class="spacing-outer-sides" style="padding-top: 24px;">
+
+             <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+                        <tr>
+                                                            <td class="spacing-bottom-16">
+                                                                <table width="100%" border="0" cellpadding="0"
+                                                                    cellspacing="0" style="border-collapse: collapse;">
+                                                                    <tr>
+
+                                           <td class="bodyLargeBold color-contentPrimary">
+
+                                                    <span>Total charged</span>
+
+                                  </td>
+                                                                        <td align="right"
+                                                                            class="bodyLargeBold color-contentPrimary">
+                                                                            <span>฿55.00</span>
+                                                                        </td>
+
+                               </tr>
+                                                                </table>
+                                                            </td>
+
+ </tr>
+                                                    </table>
+
+
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+                     <tr>
+                                                            <td class="spacing-bottom-16">
+                                                                <table width="100%" border="0" cellpadding="0"
+                                                                    cellspacing="0" style="border-collapse: collapse;">
+                                                                        <tr>
+
+                                                <td align="left" valign="middle" width="32"
+
+                                                             class="imgWrapper">
+
+                                              <img src="https:&#x2F;&#x2F;static.bolt.eu&#x2F;payment&#x2F;icons&#x2F;visa.png"
+                                                                                    border="0" width="24" height="24"
+                                                                                    alt="PaymentIcon"
+                                                                                    class="bodySmall color-contentSecondary img"
+                                                                                    id="imgPayment" />
+                                                                            </td>
+
+                                                  <td align="left" class="bodyLarge ">
+
+                                                      <span>•••• 3300</span>
+
+                                    </td>
+
+ <td align="right" class="bodyLarge ">
+
+      <span>฿55.00</span>
+                                                                            </td>
+                                                                        </tr>
+
+                   </table>
+                                                            </td>
+
+                                    </tr>
+                                                    </table>
+
+                                     </td>
+                                            </tr>
+
+                       <tr>
+                                                <td>
+
+                   <!-- Space divider -->
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td height="22px;" style="height: 22px;"></td>
+
+                                              </tr>
+                                                    </table>
+                                                    <!-- End of Space divider -->
+
+            </td>
+                                            </tr>
+                                        </table>
+                                        <!-- / Total charged -->
+
+                                        <!-- Hold info -->
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td class="spacing-outer-sides"
+                                                    style="padding-top: 0px; padding-bottom: 0px;">
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                        <tr>
+
+                            <td class="spacing-bottom-24">
+
+        <table width="100%" border="0" cellpadding="0"
+
+            cellspacing="0" style="border-collapse: collapse;">
+
+                   <tr>
+                                                                        <td>
+
+                                                               <span
+
+                                class="bodySmall color-contentPrimary"></span>
+
+                                        <span><a href=""
+
+                          class="link"><span
+
+                  class="bodySmall color-linkPrimary"></span></a></span>
+
+                              </td>
+                                                                    </tr>
+                                                                </table>
+
+            </td>
+                                                        </tr>
+
+                  </table>
+                                                </td>
+
+           </tr>
+                                        </table>
+                                        <!-- / Hold info -->
+
+                                        <!-- if order is from EU -->
+
+            <!-- Carbon Neutral Banner -->
+                                        <!-- End of Carbon Neutral Banner -->
+
+                                        <!-- if order is not from EU -->
+
+       <!-- Safety Banner -->
+                                        <table width="100%" bgcolor="#FFF8D6" border="0" cellpadding="0" cellspacing="0"
+                                            style="border-collapse: collapse; background: #FFF8D6;">
+                                            <tr>
+
+             <td class="spacing-outer-safety-banner">
+                                                    <a href="" style="text-decoration: none;">
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                                                            style="border-collapse: collapse;">
+                                                            <tr>
+
+                                            <td>
+
+<table width="100%" border="0" cellpadding="0"
+
+        cellspacing="0"
+                                                                        style="border-collapse: collapse;">
+                                                                        <tr>
+
+                                                          <td style="padding: 0 80px 16px 0;">
+
+                                                            <span
+
+                                 class="heading color-contentPrimary" style="word-break: normal;">Your safety is our priority</span>
+                                                                            </td>
+
+                                                         </tr>
+
+                  <tr>
+                                                                            <td class="spacing-bottom-40-sm banner-spacing"
+                                                                                style="padding-right: 80px;">
+                                                                                <span
+                                                                                    class="bodyLarge color-contentPrimary">We’re committed to improving your ride experience and are always looking for ways to ensure you’re as safe as possible while riding with us.</span>
+                                                                            </td>
+                                                                        </tr>
+
+                                 <tr>
+                                                                            <td style="padding: 40px 0 0 0;"
+                                                                                class="spacing-bottom-40-sm banner-spacing">
+
+     <span>
+                                                                                    <a href="https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Fblog.bolt.eu%2Fen%2Fbolt-safety%2F%3Futm_source=receipt_email%26utm_medium=safety_block%26utm_campaign=rider_receipt/1/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/x5LHg7aHlOdFQ-ReqsqJeCkW1Yw=181"
+                                                                                        class="link">
+                                                                                        <span
+
+                                                                                 class="bodyLargeBold color-linkPrimary">
+                                                                                            Learn more
+                                                                                            →
+
+                                                          </span>
+
+                                 </a>
+
+ </span>
+                                                                            </td>
+                                                                        </tr>
+
+      </table>
+                                                                </td>
+
+                                   <td>
+                                                                    <img src="https://static.bolt.eu/email/images/46-image-549.png" />
+
+       </td>
+                                                            </tr>
+
+                     </table>
+                                                    </a>
+
+                     </td>
+                                            </tr>
+
+   </table>
+                                        <!-- End of Safety Banner -->
+
+        <!-- // end if -->
+
+
+                                        <!-- Ride details -->
+
+                       <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"
+                                            style="border-collapse: collapse;">
+
+  <tr>
+                                                <td class="spacing-outer-32">
+
+                         <table width="100%" border="0" cellpadding="0" cellspacing="0"
+
+                                   style="border-collapse: collapse;">
+
+            <tr>
+                                                            <td class="heading spacing-bottom-4 color-contentPrimary">
+                                                                <span>Ride details</span>
+                                                            </td>
+
+  </tr>
+                                                        <tr>
+
+               <td
+                                                                class="bodySmall color-contentSecondary spacing-bottom-16">
+                                                                <span>Friday&#44; 15 November 2024</span>
+                                                            </td>
+
+                         </tr>
+                                                    </table>
+
+
+                                  <!-- Route Map -->
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td align="center" valign="top" width="100%"
+                                                                style="padding-bottom: 16px;">
+
+                                             <table border="0" cellpadding="0" cellspacing="0"
+
+                                                    width="100%">
+
+                   <tr>
+                                                                        <img src="https://staticmaps.live.boltsvc.net/mapImage/get?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImltYWdlX3dpZHRoIjo1MTgsImltYWdlX2hlaWdodCI6MjU5LCJwaWNrdXBfbWFya2VyIjp7Imljb24iOiJodHRwczovL2ltYWdlcy5ib2x0LmV1L2ludm9pY2luZy9lbWFpbF9tYXBfc3RhcnRfcG9pbnQucG5nIiwibG9jYXRpb24iOnsibGF0IjoxMy43MzYyMjEsImxuZyI6MTAwLjU3MjM5OH19LCJkcm9wb2ZmX21hcmtlciI6eyJpY29uIjoiaHR0cHM6Ly9pbWFnZXMuYm9sdC5ldS9pbnZvaWNpbmcvZW1haWxfbWFwX2ZpbmlzaF9wb2ludC5wbmciLCJsb2NhdGlvbiI6eyJsYXQiOjEzLjcyMjM5NSwibG5nIjoxMDAuNTU5NjQyfX0sImJyYW5kIjoiYm9sdCJ9LCJpYXQiOjE3MzE2NzkyMTUsImV4cCI6MTc5NDc1MTIxNX0.pIDqZVgfHFaB-BC2tmjV9iOQB4HU6Jtd9jtHSADBOkE"
+                                                                            width="100%" />
+                                                                    </tr>
+
+             </table>
+                                                            </td>
+
+                              </tr>
+                                                    </table>
+
+                                   <!-- // Route Map -->
+
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0"
+
+      style="border-collapse: collapse;">
+                                                        <tr>
+
+                                                   <td class="routePoints" valign="top"
+
+                                       style="background: url(https://static.bolt.eu/email/images/46-image-578.png) top -6px left no-repeat; background-size: 24px; width: 24px;">
+
+    </td>
+                                                            <td valign="center"
+
+                                          class="bodyLarge color-contentPrimary routePoints-text">
+
+                                                <table width="100%" border="0" cellpadding="0"
+
+                                                    cellspacing="0" style="border-collapse: collapse;">
+
+                                                           <tr>
+
+                   <td
+                                                                            class="bodySmall spacing-bottom-4 color-contentSecondary">
+
+  <span>Pickup:</span>
+                                                                        </td>
+
+                                                       </tr>
+
+            <tr>
+                                                                        <td class="color-contentPrimary">
+                                                                            <span>36/25 ซอย พร้อมมิตร, Krung Thep Maha Nakhon 10110</span>
+                                                                        </td>
+                                                                    </tr>
+
+               </table>
+                                                            </td>
+
+                                    <td valign="bottom" align="right"
+
+                     class="bodyLarge color-contentSecondary"
+
+           style="width: 48px; padding: 0 16px 17px 16px;">
+
+         <span
+                                                                    style="word-break: keep-all;">20:33</span>
+                                                            </td>
+
+                   </tr>
+                                                        <tr>
+
+                                <td class="routePoints" valign="top"
+
+                    style="background: url(https://static.bolt.eu/email/images/46-image-576.png) bottom 12px left no-repeat; background-size: 24px; padding-bottom: 24px; width: 24px;">
+
+          </td>
+                                                            <td valign="center"
+
+                                                class="bodyLarge color-contentPrimary routePoints-text">
+
+                                                      <table width="100%" border="0" cellpadding="0"
+
+                                                          cellspacing="0" style="border-collapse: collapse;">
+                                                                    <tr>
+
+                         <td
+                                                                            class="bodySmall spacing-bottom-4 color-contentSecondary">
+
+        <span>Dropoff:</span>
+                                                                        </td>
+                                                                    </tr>
+
+                   <tr>
+                                                                        <td class="color-contentPrimary">
+                                                                            <span>Queen Sirikit National Convention Centre, Klong Toei Khwaeng, Khlong Toei</span>
+
+                </td>
+                                                                    </tr>
+
+                                              </table>
+
+
+  </td>
+                                                            <td valign="bottom" class="bodyLarge color-contentSecondary"
+                                                                align="right"
+
+                                              style="width: 48px; padding: 0 16px 17px 16px;">
+
+                                            <span
+
+ style="word-break: keep-all;">20:44</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!-- Element Divider -->
+
+                   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                              <tr>
+                                                            <td align="center" valign="top" width="100%"
+                                                                style="padding-bottom: 16px;">
+                                                                <table border="0" cellpadding="0" cellspacing="0"
+                                                                    width="100%" id="elementDivider4" height="1"
+                                                                    style="height: 1px;">
+                                                                    <tr>
+
+                    <td align="center" valign="top"
+
+               bgcolor="#F0F2F5" width="100%"
+
+         style="background-color:#F0F2F5; height: 1px;">
+
+              </td>
+                                                                    </tr>
+
+                                            </table>
+                                                            </td>
+                                                        </tr>
+
+  </table>
+                                                    <!-- // Element Divider -->
+
+
+                                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+                                            <tr class="spacing-bottom-16">
+
+                    <td rowspan="2" width="56" class="spacing-bottom-16">
+
+                           <img width="40" height="40" src="https://static.bolt.eu/email/images/46-image-240625.png"
+                                                                    alt="Driver photo" style="display: block;">
+                                                            </td>
+
+              <td
+                                                                class="bodySmall spacing-bottom-4 color-contentSecondary">
+                                                                <span>Your driver</span>
+                                                            </td>
+
+      </tr>
+                                                        <tr>
+
+                   <td class="spacing-bottom-16">
+                                                                <span
+                                                                    class="bodyLarge color-contentPrimary">ศักดิ์ดา แกมกล้า</span>
+                                                            </td>
+
+                             </tr>
+                                                    </table>
+
+
+                                      <!-- Element Divider -->
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+         <tr>
+                                                            <td align="center" valign="top" width="100%"
+                                                                style="padding-bottom: 16px;">
+
+                                                       <table border="0" cellpadding="0" cellspacing="0"
+                                                                    width="100%" id="elementDivider4" height="1"
+                                                                    style="height: 1px;">
+
+                                       <tr>
+                                                                        <td align="center" valign="top"
+                                                                            bgcolor="#F0F2F5" width="100%"
+                                                                            style="background-color:#F0F2F5; height: 1px;">
+                                                                        </td>
+                                                                    </tr>
+
+                       </table>
+                                                            </td>
+
+                                        </tr>
+                                                    </table>
+                                                    <!-- // Element Divider -->
+
+
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+                       <tr class="spacing-bottom-32">
+                                                            <td
+                                                                class="bodySmall spacing-bottom-40-sm color-contentSecondary">
+                                                                <span>00:11:34</span>
+
+                                                   •
+
+<span>4 km</span>
+                                                            </td>
+
+                          </tr>
+                                                    </table>
+
+
+                               </td>
+                                            </tr>
+
+             </table>
+                                        <!-- End of ride details -->
+
+
+                     <!-- Give Get Banner-->
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                                            style="border-collapse:collapse;border-spacing:0;word-break:break-word;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
+                                            <tr>
+
+                         <td style="padding-left:16px;padding-right:16px;">
+
+             <table width="100%" bgcolor="#E3FDED" border="0" class="promo"
+
+                       cellpadding="0" cellspacing="0"
+                                                        style="border-collapse:collapse;border-radius:8px;border-spacing:0;word-break:break-word;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#249E64;">
+                                                        <tr>
+
+    <td class="spacing-outer-24"
+                                                                style="padding-top:24px;padding-bottom:0px;padding-right:24px;padding-left:24px;">
+
+              <table width="100%" border="0" cellpadding="0"
+
+                  cellspacing="0"
+                                                                    style="border-collapse:collapse;border-spacing:0;word-break:break-word;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;position:relative;">
+
+                                <tr>
+                                                                        <td style="padding-bottom:16px;">
+                                                                            <span
+                                                                                class="heading color-contentPrimaryInverted"
+                                                                                style="color:#FFFFFF;font-size:28px;font-weight:bold;line-height:36px;font-family:'Euclid Circular B', Arial, Avenir, Helvetica, Verdana, sans-serif;font-style:normal;">
+                                                                                Sharing is caring
+                                                                            </span>
+
+                                         </td>
+
+  <td style="padding-bottom:16px; float: right;"
+
+          class="giveGetImg">
+                                                                            <a href="https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Finvite.bolt.eu%2F1SJS36/1/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/dHW1foJr7kc6-bb_BRGE8raBoLM=181"
+
+                        class="link"
+
+  style="text-decoration:none !important;"><img
+
+                 src="https://static.bolt.eu/email/images/46-image-546.png" border="0"
+
+                                                          width="24" height="24" alt="Info"
+
+                                                                 class="bodySmall color-contentPrimaryInverted img"
+                                                                                    style="-ms-interpolation-mode:bicubic;border-width:0;outline-style:none;text-decoration:none;color:#FFFFFF;font-size:14px;font-weight:normal;line-height:20px;font-family:'Euclid Circular B', Arial, Avenir, Helvetica, Verdana, sans-serif;font-style:normal;display:block;" /></a>
+                                                                        </td>
+
+                                     </tr>
+                                                                    <tr>
+                                                                        <td>
+
+                                      <span
+
+       class="bodyLarge color-contentPrimaryInverted"
+
+                   style="color:#FFFFFF;font-size:18px;font-weight:normal;line-height:24px;font-family:'Euclid Circular B', Arial, Avenir, Helvetica, Verdana, sans-serif;font-style:normal;">
+
+                                    Let your friends experience fast, affordable rides with Bolt!
+
+                                                         </span>
+
+                    </td>
+                                                                    </tr>
+
+                                                      <tr>
+
+              <td align="left" valign="center">
+
+           <table bgcolor="#FFFFFF" cellpadding="0"
+
+                   cellspacing="0"
+
+style="border-collapse:collapse;border-radius:4px;background-color:#FFFFFF;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-spacing:0;word-break:break-word;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:unset;margin-bottom:24px;margin-top:16px;">
+                                                                                <tr>
+                                                                                    <td align="middle" valign="bottom"
+                                                                                        style="padding-top:8px;padding-bottom:8px;padding-left:24px;padding-right:24px;">
+
+                               <table border="0"
+
+                          cellpadding="0"
+
+                   cellspacing="0"
+
+            style="border-collapse:collapse;text-align:center;border-spacing:0;word-break:break-word;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
+
+                                                                                 <tr>
+
+                                                                 <td class="caption color-contentSecondary"
+                                                                                                    style="color:#818391;font-size:12px;font-weight:normal;line-height:16px;font-family:'Euclid Circular B', Arial, Avenir, Helvetica, Verdana, sans-serif;font-style:normal;">
+
+          <span>Your code</span>
+
+            </td>
+                                                                                            </tr>
+                                                                                            <tr>
+
+                                                                              <td class="bodyLargeBold color-contentPrimary"
+                                                                                                    style="color:#2F313F;font-size:18px;font-weight:bold;line-height:24px;font-family:'Euclid Circular B', Arial, Avenir, Helvetica, Verdana, sans-serif;font-style:normal;">
+
+                         <span>1SJS36</span>
+
+                        </td>
+
+     </tr>
+                                                                                        </table>
+                                                                                    </td>
+
+                                               </tr>
+
+            </table>
+                                                                        </td>
+
+                                                         <td align="right" valign="bottom"
+
+                                                      style="padding-bottom: 24px;"
+
+                                             class="giveGetImg">
+
+                          <img src="https://static.bolt.eu/email/images/46-image-548.png" border="0"
+
+                                                                    alt="GiveGet"
+
+                                               class="bodySmall color-contentPrimaryInverted img"
+
+                                                               style="-ms-interpolation-mode:bicubic;border-width:0;outline-style:none;text-decoration:none;color:#FFFFFF;font-size:14px;font-weight:normal;line-height:20px;font-family:'Euclid Circular B', Arial, Avenir, Helvetica, Verdana, sans-serif;font-style:normal;display:block;" />
+
+                                                      </td>
+
+           </tr>
+                                                            </td>
+
+                         </tr>
+                                                    </table>
+
+                          </td>
+                                            </tr>
+
+        </table>
+                                    </td>
+                                </tr>
+
+
+                      <!-- End of Give Get Banner -->
+
+                                <!-- Space divider-->
+                                <tr>
+                                    <td align="center" valign="top">
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+                                 <tr>
+                                                <td height="24px;" style="height: 24px;"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+      <!-- End of Space divider -->
+
+
+                                <!-- Space divider-->
+
+                <tr>
+                                    <td align="center" valign="top">
+
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+                   <tr>
+                                                <td height="24px;" style="height: 24px;"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- End of Space divider -->
+
+
+                                <!-- LINKS -->
+
+                                <!-- Invoice -->
+                                <tr>
+                                    <td align="center" valign="top">
+                                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                <tr>
+
+  <td class="spacing-outer-sides" style="padding-bottom: 0px;">
+
+       <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+                      <tr>
+                                                                <td style="padding-top: 16px; padding-bottom: 16px;">
+                                                                    <table width="100%" border="0" cellpadding="0"
+                                                                        cellspacing="0"
+                                                                        style="border-collapse: collapse;">
+                                                                        <tr>
+
+                                       <td class="bodyMedium color-linkPrimary">
+
+                                              <span><a href="https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Finvoice.taxify.eu%2F%3Fs=90b4859d-c995-4437-ac2c-66f9e8000870/1/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/24SuxZXU5XR0FZst3Ok4w43mE8k=181">Download PDF invoice</a></span>
+
+                               </td>
+                                                                        </tr>
+                                                                    </table>
+
+                         </td>
+                                                            </tr>
+
+                                       </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                     </td>
+                                </tr>
+                                <!-- End of invoice -->
+
+
+
+                                <!-- Element Divider -->
+                                <tr>
+                                    <td align="center" valign="top">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td align="center" valign="top" width="100%" class="spacing-outer-sides"
+                                                    style="padding-top: 0px; padding-bottom: 0px;">
+
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                                        id="elementDivider5" height="1" style="height: 1px;">
+                                                        <tr>
+
+               <td align="center" valign="top" bgcolor="#F0F2F5"
+
+                  width="100%"
+                                                                style="background-color:#F0F2F5; height: 1px;"></td>
+                                                        </tr>
+
+                                   </table>
+
+                                                </td>
+
+                                </tr>
+                                        </table>
+
+         </td>
+                                </tr>
+                                <!-- // Element Divider -->
+
+                                <!-- Element Divider -->
+                                <tr>
+
+                      <td align="center" valign="top">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+
+                                     <td align="center" valign="top" width="100%" class="spacing-outer-sides"
+                                                    style="padding-top: 0px; padding-bottom: 0px;">
+
+
+                                          <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                                        id="elementDivider5" height="1" style="height: 1px;">
+                                                        <tr>
+                                                            <td align="center" valign="top" bgcolor="#F0F2F5"
+
+  width="100%"
+                                                                style="background-color:#F0F2F5; height: 1px;"></td>
+                                                        </tr>
+
+                   </table>
+
+                                                </td>
+
+                </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- // Element Divider -->
+
+
+                      <tr>
+                                    <td align="center" valign="top">
+
+                          <a href="https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Fbolt.onelink.me%2FsbJ2%2Fce134c74/1/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/KkdU4M3qjLwP_EdrRVWpyAWEKLI=181" style="text-decoration: none;">
+                                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                <tr>
+
+          <td class="spacing-outer-sides"
+                                                        style="padding-top: 0px; padding-bottom: 24px;">
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                            <tr>
+                                                                <td style="padding-top: 16px; padding-bottom: 16px;">
+                                                                    <table width="100%" border="0" cellpadding="0"
+                                                                        cellspacing="0"
+
+                                                style="border-collapse: collapse;">
+
+                                         <tr>
+
+     <td class="bodyMedium color-linkPrimary">
+
+            <span>Contact support</span>
+
+</td>
+                                                                            <td align="right"
+
+                                                                    class="bodyLarge color-contentPrimary">
+                                                                                <img src="https://static.bolt.eu/email/images/46-image-572.png" border="0"
+                                                                                    width="24" height="24" alt="Support"
+
+         class="bodySmall color-contentSecondary img"
+
+                       id="imgSupport" />
+
+   </td>
+                                                                        </tr>
+
+                                         </table>
+                                                                </td>
+                                                            </tr>
+
+           </table>
+                                                    </td>
+
+            </tr>
+                                            </table>
+                                        </a>
+                                    </td>
+                                </tr>
+
+   <!-- End of LINKS -->
+
+                                <!-- Contact Support notice -->
+
+
+               <tr>
+                                    <td align="center" valign="top">
+
+                   <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+                  <tr class="spacing-outer-32">
+                                                <td
+
+                                        class="bodySmall spacing-bottom-40-sm color-contentSecondary spacing-outer-sides ">
+                                                    <span>
+
+       This is an automated email. If you need help, please
+                                                        <a href="https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Fbolt.onelink.me%2FsbJ2%2Fce134c74/2/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/fE9Xg6M-Cee07q6BOaiFJkFSdAM=181"
+
+                      style="text-decoration: none; font-size: 14px"
+
+              class="color-linkPrimary">contact support here</a>
+
+      instead of replying to this email.
+                                                    </span>
+
+                                   </td>
+                                            </tr>
+
+                 </table>
+                                        <!-- // Contact Support notice -->
+
+
+                           </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!--/ Email Body -->
+
+                <!-- Email Footer -->
+
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="footerWrapper" bgcolor="#FFFFFF"
+                    style="background-color:#FFFFFF; ">
+                    <tr>
+                        <td align="center" valign="top">
+
+        <table border="0" cellspacing="0" width="600" id="footerContainer">
+                                <tr>
+                                    <td align="center" valign="top" class="spacing-outer spacing-bottom-40-sm">
+
+                                        <!-- Email Footer Content -->
+
+     <table border="0" cellpadding="0" cellspacing="0" width="100%"
+
+   id="footerContent">
+                                            <tr>
+
+        <td align="center" valign="top">
+
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                                        class="bodySmall color-contentTertiary">
+                                                        <tr>
+
+                                            <td align="center" valign="top">
+
+                            <span>
+                                                                    ศักดิ์ดา แกมกล้า</span>
+                                                            </td>
+
+                  </tr>
+                                                    </table>
+
+                   </td>
+                                            </tr>
+
+ </table>
+                                    </td>
+                                </tr>
+
+       </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="footerWrapper" bgcolor="#FFFFFF"
+                    style="background-color:#FFFFFF; ">
+                    <tr>
+                        <td align="center" valign="top">
+                            <table border="0" class="spacing-outer" cellspacing="0" width="600" id="footerContainer">
+                                <tr>
+
+    <td align="center" valign="top" class="spacing-bottom-24">
+
+                                        <!-- Email Footer Content -->
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                            id="footerContent">
+
+                <tr>
+                                                <td align="center" valign="top">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                                        id="footerContentCaption">
+
+                      <tr>
+                                                            <td align="center" valign="top" class="spacing-bottom-8">
+                                                                <span class="bodySmall color-contentSecondary">
+                                                                    Made with
+                                                                    &#128154;
+
+                        in Estonia</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                                        id="footerContentSocial">
+
+                                    <tr>
+                                                            <td align="center" valign="middle">
+                                                                <table border="0" cellpadding="0" cellspacing="0"
+                                                                    width="initial">
+                                                                    <tr>
+
+                            <td align="center" valign="middle" width="40"
+
+                                       class="imgWrapper">
+
+                    <a href="https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Fwww.facebook.com%2Fbolt/1/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/2Cgl_U_oQkEhlT6UsiSwYJOhgac=181"
+
+                                                     class="link"><img src="https://static.bolt.eu/email/images/46-image-573.png"
+                                                                                    width="24" height="24"
+                                                                                    alt="Facebook"
+                                                                                    class="bodySmall color-contentSecondary img-social-link" /></a>
+                                                                        </td>
+
+                                                                        <td align="center" valign="middle" width="40"
+                                                                            class="imgWrapper">
+
+                                                         <a href="https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Fwww.instagram.com%2Fbolt/1/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/PXwf3uSvE8tnrYjB7nZKDp2EIRI=181"
+                                                                                class="link"><img src="https://static.bolt.eu/email/images/46-image-574.png"
+
+                   width="24" height="24"
+
+             alt="Instagram"
+                                                                                    class="bodySmall color-contentSecondary img-social-link" /></a>
+
+                   </td>
+
+                                                                        <td align="center" valign="middle" width="40"
+                                                                            class="imgWrapper">
+                                                                            <a href="https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Ftwitter.com%2Fboltapp/1/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/HYhr_UF6UgorbuQyxb6UDXYrIys=181"
+
+       class="link"><img src="https://static.bolt.eu/email/images/46-image-575.png"
+
+                                                       width="24" height="24" alt="Twitter"
+
+                                                                 class="bodySmall color-contentSecondary img-social-link" /></a>
+                                                                        </td>
+
+                                           </tr>
+                                                                </table>
+                                                            </td>
+
+             </tr>
+                                                    </table>
+
+
+                  </td>
+                                            </tr>
+
+</table>
+                                        <!-- // Email Footer Content -->
+
+    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!--/ Email Footer -->
+
+
+  </td>
+        </tr>
+    </table>
+    <div style="display:none;">
+
+    </div>
+    <img src="https://node.bolt.eu/email-internal/pixel?id=8f9ce700bc4f425850fc532c155ace7f4cb524f62a29cdbe478cb7176748605a841a4f37b310.gif" style="width:1px;height:1px;"/>
+<img alt="" src="https://3zf1wp45.r.eu-central-1.awstrack.me/I0/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/T6qLEYtFJGoZhPclz4k3AR616_g=181" style="display: none; width: 1px; height: 1px;">
+</body>
+
+</html>
