@@ -1,0 +1,73 @@
+Received: from mail-yb1-xb43.google.com (mail-yb1-xb43.google.com [2607:f8b0:4864:20::b43])
+	by newxmmxsza29-0.qq.com (NewMX) with SMTP id C0B868F6
+	for <804173948@qq.com>; Sat, 16 Nov 2024 04:48:11 +0800
+X-QQ-mid: xmmxza29-0t1731703691tl1amsuew
+X-QQ-XMAILINFO: N/GyE8mQRfvNZlc1acJ6F6AitOnPGVAj+PAam0hDf8XnP7WT46Tg9wcAe3ZDWL
+	 EeNwveakBvtMPRM0z+y5kJ5UwaSUW4HgQasoulV/hQUBFnCCp3MoCsLt7tyrgWhjrbsQDfKxAGiF
+	 k9Ms/L6PUo0R8+yQ1nNwylrklL0b3OVQxHKTW/ZYdOBhHzGYZd3B3qhBat8BLQl81RpP4WV3lM+0
+	 yRwN/k4W25ppgx5AujY/Uxp0c6j/3vm2R1ND09sYjeCUsA1eBZIOD1Km+bkcw6F2vJGB0BGEfRbq
+	 hmKTaUWO+5JBMAo+DfEStOPqevAiXawlvNOAFbVGUSa7hmDMnP/hX9hwT6wxUiDdr0dByZe1MVOV
+	 8jgH10PDUilaoKarXAn38IFg6aNVXhhHp9gmNy28rurrAZFP6XSTw0tIZLVIbeBLWq1jhZ9ENWL+
+	 4cU6S2Ev38r8/OfDBmNGT/YLNxz497ESe/iusbtEJhNlAKYjIh0xorSvWGR7ABugwK8x5WHq5xfo
+	 DJmIJ4e1SAr1HqDtVe617eJSr+8ZSBh6FoxeMwAKfhA3zkb/UJ9rxuE63iXrhoR5U2D6X8fh7yaP
+	 BeyN6fRW6anYmqjz1eyfxDkRAmnfZs9fajsHzDPn5lY212TGw4FGjj0Gz+QGxhyEHs9iMHklcIMQ
+	 suFQPPgu9EoGY27FsL5P9mDZlIftPm9556F7+nRdkLGKEGcVlAFJ3oJYRIWVYW/0v6Z0SaVj0WR3
+	 NXGCCFzNOTRqXa1FBHYpEiFZFakaXiab2JR7htpJf2qaylX9oJwR3IvQyjhWEXyHhNCuHGMxNBgM
+	 +V9xYLJxt53o4c15NKQYW/InNGSkvC8qWlMcKKF9WwAuTACSkefVzeo6W2AzxYVK3t2eRwhxiX+v
+	 T9Y8LzK4L64ijBwPMbi9mTzc3cVVJ6Fv7Vz0FbZYH0lHPj3bB/5heroyjQvDZr4cEMmZSmWpJmRg
+	 TvOhX2c44eDbG6bMxHXxKpGSIbdGygskWOQKoAKeOBbCLy8J2TUg9PAdmUQM6jxit88kNYuYbvI6
+	 CFLnGIssdsYsHt/P1hZ1ORVNyGCIY=
+X-QQ-XMRINFO: OWPUhxQsoeAVDbp3OJHYyFg=
+Authentication-Results: mx.qq.com; spf=pass(2607:f8b0:4864:20::b43) smtp.mailf
+	 rom=<0xja.eth@gmail.com>; dkim=pass(signature was verified) header.d=gmail.c
+	 om; dmarc=pass(p=NONE sp=QUARANTINE pct=100) header.from=gmail.com
+Received: by mail-yb1-xb43.google.com with SMTP id 3f1490d57ef6-e3819b7b57dso1125812276.1
+        for <804173948@qq.com>; Fri, 15 Nov 2024 12:48:12 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1731703691; x=1732308491; darn=qq.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=tVDEcNpo+h1y807zXLSp9amILOUSE5Mr1/nxNKMHF/g=;
+        b=NUHZo4/GI963pXX69LQCtw/NtU93TjUtYjWeL0T32fxZCGy06PIX68pgjkxUAuYVxr
+         yPXLvPbJKJ+xt6cggyddXlfq9MiKW8Lc+NNbZq3TD8S/fM96e0DfkxgC0zlgxdjiUGgD
+         iKagEBkFpAo3Pfas0NEZlQeIKw7sdmZJZ6cPNzz6LIML51rT1H6DNhIae1FXn4yy0DJG
+         hLCd44MftrtRqxYH+oI5bgeSBfNZMWabH+1CkZk6F4fpQwemrbjfkO3ZLgewIUubeK7R
+         XLsQxLJcr3nKXcyZCqsvsUXUjPCEqqm+mq2Xiv2b3bVX8zz93PS99TPtKVuZJRiJVTAN
+         4NcQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1731703691; x=1732308491;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=tVDEcNpo+h1y807zXLSp9amILOUSE5Mr1/nxNKMHF/g=;
+        b=MGHLnOjimhrOetRnl1ZpXdwyNI4cLPxa9DQ4PN5MEG3C7g7b9rnXQMK9aLG28hLu81
+         IarxzLHFeOqdkM0GMtpSve7GEL2mVJyEVKmDoHx0nuO6XlV0p/O4eKo8d2Y2h+Kt+YYI
+         W+1aVBZTr54Nzxz+LNNtZJf6MZjuyurmowfswvCuxnbuhMtCZG6wQqGK65KMT6mSapBC
+         8CUXLzjrOrfolRmxlTx6RfbiwYmp/DhH6GzPbZBySjw2rnpIgJTHCxlwnyXhGkCrWDC3
+         6TvRZ9sAjpK2/WrxJ+VGGC40s6rsvD6SV4vIE1yCX72lWB2xrvOwKEW2gpkzGIjaMqrz
+         LhYw==
+X-Gm-Message-State: AOJu0Yz06h1zizwgEn+MGklq9Z2fkH7KKBcMUiprl2B5YEQgnPeQx1B2
+	gwZkFL1SfIQ/gVvA+hryhF65MsMWV7/W/UNTqi1PwDfvUah+Ub3PmtnI9wJmsVUMjDnKthIoLx0
+	kyJKg8zytH+gZBy7MqftXdbP9fiV9X4tp3+Mlng==
+X-Google-Smtp-Source: AGHT+IEeaofxhJLHFFMVMQq4zJRxYdGfV74PBuvy67z1/wt2fXYum7XyRHoiOvnRkEbWb6Mb/wDnAvE1tTt+7hu1wLE=
+X-Received: by 2002:a05:6902:1081:b0:e35:da3b:9405 with SMTP id
+ 3f1490d57ef6-e3826128fe3mr3947336276.12.1731703690811; Fri, 15 Nov 2024
+ 12:48:10 -0800 (PST)
+MIME-Version: 1.0
+From: 0xJA <0xja.eth@gmail.com>
+Date: Sat, 16 Nov 2024 03:48:00 +0700
+Message-ID: <CAJOt4SEDuFvQCNQO5JX+QP2O4n-vLCbjRXm+qUUxdMq+Jegtow@mail.gmail.com>
+Subject: GG
+To: 0xJA <804173948@qq.com>
+Content-Type: multipart/alternative; boundary="00000000000058e77b0626f9af1a"
+
+--00000000000058e77b0626f9af1a
+Content-Type: text/plain; charset="UTF-8"
+
+GG, Pickuup:
+
+--00000000000058e77b0626f9af1a
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">GG, Pickuup:</div>
+
+--00000000000058e77b0626f9af1a--

@@ -1,0 +1,1613 @@
+Received: from mail-yb1-xb2e.google.com (mail-yb1-xb2e.google.com [2607:f8b0:4864:20::b2e])
+	by newxmmxszb20-1.qq.com (NewMX) with SMTP id 51F214B9
+	for <804173948@qq.com>; Sat, 16 Nov 2024 04:20:31 +0800
+X-QQ-mid: xmmxzb20-1t1731702063tos995di2
+X-QQ-XMAILINFO: NELwyfGakffPRGEw0Kb5WS0p9AvA6a7nEL2kjRlsIo8IJOzyY29fd+S+aGZXy7
+	 x8flcyZWD/AsByzXS3WUdjN/NMR1IaHxz5XrwbF8izImRgPmWLTSkYBHySUxG3hqJv3vA2vOrDsi
+	 TFWzNqNzBStwcyuAUbXaYN6Mo12UrY+6az+XdNSzdFPGMmCOQbO5/2SRONg6kek53s3SxN7lBruD
+	 KQJLppc4LNjorFXoUpknDTxtbhuRZIBBJDWNGEWLQSeF+vIW0TH1XgFVtMfe085yiq4X/1A4wIfM
+	 Jd9pphJYSvdbWvdV8/P+bdPWZr4zwWGgEz/Ld9RNNkvUCJdD0c2+bp/5+hWhf7gb96m/M8jGtJv8
+	 L8CUcAc6VeggWBTwzir7lVIA5eD9ZdtoTaCm20N3IeTw6dt+4QkTfpq9DAfm6WbCzVi1HZ1a/qqc
+	 U6MGrHnEk5iDYciG8gexUYjR+UPwJqd4eWxAldM/iI/MveBW7QP7wGGwMPyvWzUnI/HoxZ43kTeb
+	 Ynx6Nu/BNyy4v+OyTvIFpH21bciGUI666xhSfkgVOvjXFe6HEo/zoUXfTFUTpRV07EcZTBPvpR8/
+	 BWkxIsMvDLb/FH8LsSZNlFrh5pZ8mFjiybX+zm2wDE694atMrsEVaza/izK0PUg2oG+QWTBn08+p
+	 b0AvT9mK/3w/QSE2aQ598aQ6/BczQ1zoZsiMs7nIbNyWidDlxBHgi3b6FBaiKFRh7WUNK+QdWdtx
+	 DxbSarWJ1QriFDvUV3TNHjSobuJod4M1FuRvOI9bOMFBAWAfzTz7gSmEeL+b74g2s9g2bq4yOvb5
+	 Ic/ICP7i8lDmqjHAwibcxPjqg0RG2NgHEPWbeeBHUCl3Xt/u4YEHCcoz05JLNz6r1yi6SGTC6upp
+	 U0+DrMSzwiZ8PdNlTMHxBLBJSwVNM1P50Vqy7MqxgtHtc3oPn5zBVWF7M3kdRKjST6xkpZOhQv6r
+	 6tCr+1krAqV4WnO2EkeeblykcbRiAEO3ckkAbBCDZPrY6vZeOfJXn1sSJiTIt6m9TZZOG7pVvW4F
+	 OZQUJz0OhMXkLEa1GIbmE9NaGLIfIGgk88FwAkgb/CC6TRZl2PTkqxO4xDBBl0JvJ0NmXiws9W8x
+	 k+8ncF7MBmogHXgaeQq4O8N3aR8w==
+X-QQ-XMRINFO: NmyfvsrRkCkJS5MlOxeZYe4=
+Authentication-Results: mx.qq.com; spf=pass(2607:f8b0:4864:20::b2e) smtp.mailf
+	 rom=<0xja.eth@gmail.com>; dkim=pass(signature was verified) header.d=gmail.c
+	 om; dmarc=pass(p=NONE sp=QUARANTINE pct=100) header.from=gmail.com
+Received: by mail-yb1-xb2e.google.com with SMTP id 3f1490d57ef6-e380f8b0c6aso1950404276.0
+        for <804173948@qq.com>; Fri, 15 Nov 2024 12:21:03 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1731702062; x=1732306862; darn=qq.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=At921o3m7gwvd9nvZG8zoJZg1ds93m3YXt48JW3idIo=;
+        b=j1NsoIgDupRL8sgXLzgraCx3U0meDYthHL/cEdINl9Cr84iw6W+h/L9pbCDOtHCRI4
+         eYCHIBnmuHApv9nrsL7zTGxKP8zepKH/WSIjbJBw89IQkvW3ba/IcBezq9y0J3AgTgIu
+         +5vPQZFVSqnFP3iGdoEgMUynIfaVm0Qq3LEiaJitwrzXD4QC+wjkYsOic+i5YAxI9yME
+         FxGD5g4DlhVNQHQQVXjYSpf579hgc9iYqfZJUouHrWp3JS6Widpr5ahSYlXfIJ5aWFOH
+         hdypf78Fe0pqM2Dcy0e3mD7BevtALTs70fdZ4X5GU+jOmP2GF4HLAaQUdt7GtyaP+YvI
+         4dug==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1731702062; x=1732306862;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=At921o3m7gwvd9nvZG8zoJZg1ds93m3YXt48JW3idIo=;
+        b=Z5k7Pggi0RrcWDuPVPSK/VT70xfJjHEQAD4GjLTV/HZX2cpBtbSKgl2BHsIsKzxVtQ
+         WyM2v1YPHyPvcslnHmItwbUC7fZVf3i5yk3VhevUmB45t6N1ZCth/vY+SpwC3QXccEhr
+         oY4jTfkvgrOgmlpHLjfCPOMbRBuGeF4vDUGX1NC4sKJR6QS9pdrunMkTOfMyGwCrvEdC
+         v4h7vImLeGODDVJRIrzW69s15TVLowUizPelREj1isQqwc+tYkK+xNQSjgtoqLLoAyj7
+         LiBqUFTxjZijUrsws1som5Kd0hAebAtbBSewbJbPOk3BCnSnAvy+n9H1uiHDvmtmNjdh
+         UGlQ==
+X-Gm-Message-State: AOJu0YztOSe9PXT+5Ps/qWyxPsrdDC56DVda5yJOhn76dK/h3rWWIrcP
+	jcChbI6ux1ocKCtboFTcZZKRobnEg87QrPCrOR1cdxGwTvggkUV8NZjKT2b/k1fEMe/EYzMRtsq
+	dVRiBew9QLHo/R/ZwbxlQYdS6015iex3jDGc=
+X-Google-Smtp-Source: AGHT+IHhR8gnoVaJrZsSyv+2exWpE22Cl5uQgKW03HkHe8oYh0MSqf/uVdLCDwdKDjYwtz8kWYcB/EWhn58wPGist6k=
+X-Received: by 2002:a25:bb4e:0:b0:e38:2b99:7f2d with SMTP id
+ 3f1490d57ef6-e382b99813fmr2765841276.12.1731702062245; Fri, 15 Nov 2024
+ 12:21:02 -0800 (PST)
+MIME-Version: 1.0
+References: <01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000@eu-central-1.amazonses.com>
+In-Reply-To: <01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000@eu-central-1.amazonses.com>
+From: 0xJA <0xja.eth@gmail.com>
+Date: Sat, 16 Nov 2024 03:20:51 +0700
+Message-ID: <CAJOt4SGiLL-eY+7wDfpBzJHH5xFSadMAROMLQmp74_Jk3vCOsg@mail.gmail.com>
+Subject: Fwd: Your Bolt trip on Friday
+To: 804173948@qq.com
+
+--00000000000046f1860626f94e99
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+LS0tLS0tLS0tLSBGb3J3YXJkZWQgbWVzc2FnZSAtLS0tLS0tLS0NCuWPkeS7tuS6uu+8miBCb2x0
+IFRoYWlsYW5kIDxiYW5na29rQGJvbHQuZXU+DQpEYXRlOiAyMDI05bm0MTHmnIgxNeaXpeWRqOS6
+lCAyMTowMA0KU3ViamVjdDogWW91ciBCb2x0IHRyaXAgb24gRnJpZGF5DQpUbzogTGkgPDB4amEu
+ZXRoQGdtYWlsLmNvbT4NCg0KDQpUaGFua3MgZm9yIGNob29zaW5nIEJvbHQg4oCUIGhlcmUncyB5
+b3VyIHJpZGUgcmVjZWlwdCENCiDigIwg4oCMIOKAjCDigIwg4oCMIOKAjCDigIwg4oCMIOKAjCDi
+gIwg4oCMIOKAjCDigIwgIOKAjCDigIwgIOKAjCDigIwg4oCMIOKAjCDigIwg4oCMIOKAjCDigIwg
+4oCMIOKAjCDigIwgIOKAjCDigIwg4oCMIOKAjA0KIOKAjCDigIwg4oCMIOKAjCDigIwg4oCMIOKA
+jCDigIwg4oCMICDigIwg4oCMIOKAjCDigIwg4oCMIOKAjCAg4oCMIOKAjCDigIwg4oCMIOKAjCDi
+gIwg4oCMICDigIwg4oCMIOKAjCDigIwg4oCMIOKAjCDigIwg4oCMDQog4oCMIOKAjCDigIwg4oCM
+IOKAjCAg4oCMIOKAjCDigIwg4oCMIOKAjCDigIwg4oCMIOKAjCDigIwg4oCMICDigIwg4oCMIOKA
+jCAg4oCMIOKAjCDigIwg4oCMIOKAjCDigIwg4oCMIOKAjCDigIwg4oCMIOKAjCDigIwNCiDigIwg
+4oCMIOKAjCAg4oCMIOKAjCDigIwg4oCMIOKAjCDigIwg4oCMIOKAjCDigIwg4oCMIOKAjCDigIwg
+IOKAjCDigIwg4oCMICDigIwg4oCMIOKAjCDigIwg4oCMIOKAjCDigIwg4oCMIOKAjCDigIwg4oCM
+IOKAjA0KIOKAjCDigIwg4oCMICDigIwg4oCMIOKAjCDigIwg4oCMIOKAjCDigIwg4oCMIOKAjCDi
+gIwg4oCMIOKAjCAg4oCMIOKAjCDigIwgIOKAjCDigIwg4oCMIOKAjCDigIwg4oCMIOKAjCDigIwg
+4oCMIOKAjCDigIwg4oCMDQog4oCMICDigIwg4oCMIOKAjCDigIwg4oCMIOKAjCDigIwg4oCMIOKA
+jCDigIwg4oCMIOKAjCDigIwgICDigIwg4oCMIOKAjCDigIwg4oCMIOKAjCDigIwg4oCMIOKAjA0K
+W2ltYWdlOiBCb2x0XQ0KVG90YWw6IOC4vzU1LjAwDQpGcmlkYXksIDE1IE5vdmVtYmVyIDIwMjQN
+ClRoYW5rcyBmb3IgcmlkaW5nIHdpdGggdXMsIExpDQpXZSBob3BlIHlvdSBlbmpveWVkIHlvdXIg
+cmlkZQ0KDQpbaW1hZ2U6IENhcl0NClRvdGFsIOC4vzU1LjAwDQpGYXJlIOC4vzU1LjAwDQpUb3Rh
+bCDguL81NS4wMA0KVG90YWwgY2hhcmdlZCDguL81NS4wMA0KW2ltYWdlOiBQYXltZW50SWNvbl0g
+4oCi4oCi4oCi4oCiIDMzMDAg4Li/NTUuMDANCllvdXIgc2FmZXR5IGlzIG91ciBwcmlvcml0eQ0K
+V2XigJlyZSBjb21taXR0ZWQgdG8gaW1wcm92aW5nIHlvdXIgcmlkZSBleHBlcmllbmNlIGFuZCBh
+cmUgYWx3YXlzIGxvb2tpbmcNCmZvciB3YXlzIHRvIGVuc3VyZSB5b3XigJlyZSBhcyBzYWZlIGFz
+IHBvc3NpYmxlIHdoaWxlIHJpZGluZyB3aXRoIHVzLg0KTGVhcm4gbW9yZSDihpINCjxodHRwczov
+LzN6ZjF3cDQ1LnIuZXUtY2VudHJhbC0xLmF3c3RyYWNrLm1lL0wwL2h0dHBzOiUyRiUyRmJsb2cu
+Ym9sdC5ldSUyRmVuJTJGYm9sdC1zYWZldHklMkYlM0Z1dG1fc291cmNlPXJlY2VpcHRfZW1haWwl
+MjZ1dG1fbWVkaXVtPXNhZmV0eV9ibG9jayUyNnV0bV9jYW1wYWlnbj1yaWRlcl9yZWNlaXB0LzEv
+MDEwNzAxOTMzMDFmZGY0My00NDYzZmJlOS1kZTFlLTQzZDctYTBmOC01YmJkYWEzOGZiOTEtMDAw
+MDAwL3g1TEhnN2FIbE9kRlEtUmVxc3FKZUNrVzFZdz0xODE+DQpSaWRlIGRldGFpbHMNCkZyaWRh
+eSwgMTUgTm92ZW1iZXIgMjAyNA0KUGlja3VwOg0KMzYvMjUg4LiL4Lit4LiiIOC4nuC4o+C5ieC4
+reC4oeC4oeC4tOC4leC4oywgS3J1bmcgVGhlcCBNYWhhIE5ha2hvbiAxMDExMCAyMDozMw0KRHJv
+cG9mZjoNClF1ZWVuIFNpcmlraXQgTmF0aW9uYWwgQ29udmVudGlvbiBDZW50cmUsIEtsb25nIFRv
+ZWkgS2h3YWVuZywgS2hsb25nIFRvZWkNCjIwOjQ0DQpbaW1hZ2U6IERyaXZlciBwaG90b10gWW91
+ciBkcml2ZXINCuC4qOC4seC4geC4lOC4tOC5jOC4lOC4siDguYHguIHguKHguIHguKXguYnguLIN
+CjAwOjExOjM0IOKAoiA0IGttDQpTaGFyaW5nIGlzIGNhcmluZyBbaW1hZ2U6IEluZm9dDQo8aHR0
+cHM6Ly8zemYxd3A0NS5yLmV1LWNlbnRyYWwtMS5hd3N0cmFjay5tZS9MMC9odHRwczolMkYlMkZp
+bnZpdGUuYm9sdC5ldSUyRjFTSlMzNi8xLzAxMDcwMTkzMzAxZmRmNDMtNDQ2M2ZiZTktZGUxZS00
+M2Q3LWEwZjgtNWJiZGFhMzhmYjkxLTAwMDAwMC9kSFcxZm9KcjdrYzYtYmJfQlJHRThyYUJvTE09
+MTgxPg0KTGV0IHlvdXIgZnJpZW5kcyBleHBlcmllbmNlIGZhc3QsIGFmZm9yZGFibGUgcmlkZXMg
+d2l0aCBCb2x0IQ0KWW91ciBjb2RlDQoxU0pTMzYgW2ltYWdlOiBHaXZlR2V0XQ0KRG93bmxvYWQg
+UERGIGludm9pY2UNCjxodHRwczovLzN6ZjF3cDQ1LnIuZXUtY2VudHJhbC0xLmF3c3RyYWNrLm1l
+L0wwL2h0dHBzOiUyRiUyRmludm9pY2UudGF4aWZ5LmV1JTJGJTNGcz05MGI0ODU5ZC1jOTk1LTQ0
+MzctYWMyYy02NmY5ZTgwMDA4NzAvMS8wMTA3MDE5MzMwMWZkZjQzLTQ0NjNmYmU5LWRlMWUtNDNk
+Ny1hMGY4LTViYmRhYTM4ZmI5MS0wMDAwMDAvMjRTdXhaWFU1WFIwRlpzdDNPazR3NDNtRThrPTE4
+MT4NCkNvbnRhY3Qgc3VwcG9ydCBbaW1hZ2U6IFN1cHBvcnRdDQo8aHR0cHM6Ly8zemYxd3A0NS5y
+LmV1LWNlbnRyYWwtMS5hd3N0cmFjay5tZS9MMC9odHRwczolMkYlMkZib2x0Lm9uZWxpbmsubWUl
+MkZzYkoyJTJGY2UxMzRjNzQvMS8wMTA3MDE5MzMwMWZkZjQzLTQ0NjNmYmU5LWRlMWUtNDNkNy1h
+MGY4LTViYmRhYTM4ZmI5MS0wMDAwMDAvS2tkVTRNM3FqTHdQX0VkclJWV3B5QVdFS0xJPTE4MT4N
+ClRoaXMgaXMgYW4gYXV0b21hdGVkIGVtYWlsLiBJZiB5b3UgbmVlZCBoZWxwLCBwbGVhc2UgY29u
+dGFjdCBzdXBwb3J0IGhlcmUNCjxodHRwczovLzN6ZjF3cDQ1LnIuZXUtY2VudHJhbC0xLmF3c3Ry
+YWNrLm1lL0wwL2h0dHBzOiUyRiUyRmJvbHQub25lbGluay5tZSUyRnNiSjIlMkZjZTEzNGM3NC8y
+LzAxMDcwMTkzMzAxZmRmNDMtNDQ2M2ZiZTktZGUxZS00M2Q3LWEwZjgtNWJiZGFhMzhmYjkxLTAw
+MDAwMC9mRTlYZzZNLUNlZTA3cTZCT2FpRkprRlNkQU09MTgxPg0KaW5zdGVhZCBvZiByZXBseWlu
+ZyB0byB0aGlzIGVtYWlsLg0K4Lio4Lix4LiB4LiU4Li04LmM4LiU4LiyIOC5geC4geC4oeC4geC4
+peC5ieC4sg0KTWFkZSB3aXRoIPCfkpogaW4gRXN0b25pYQ0KW2ltYWdlOiBGYWNlYm9va10NCjxo
+dHRwczovLzN6ZjF3cDQ1LnIuZXUtY2VudHJhbC0xLmF3c3RyYWNrLm1lL0wwL2h0dHBzOiUyRiUy
+Rnd3dy5mYWNlYm9vay5jb20lMkZib2x0LzEvMDEwNzAxOTMzMDFmZGY0My00NDYzZmJlOS1kZTFl
+LTQzZDctYTBmOC01YmJkYWEzOGZiOTEtMDAwMDAwLzJDZ2xfVV9vUWtFaGxUNlVzaVN3WUpPaGdh
+Yz0xODE+DQpbaW1hZ2U6DQpJbnN0YWdyYW1dDQo8aHR0cHM6Ly8zemYxd3A0NS5yLmV1LWNlbnRy
+YWwtMS5hd3N0cmFjay5tZS9MMC9odHRwczolMkYlMkZ3d3cuaW5zdGFncmFtLmNvbSUyRmJvbHQv
+MS8wMTA3MDE5MzMwMWZkZjQzLTQ0NjNmYmU5LWRlMWUtNDNkNy1hMGY4LTViYmRhYTM4ZmI5MS0w
+MDAwMDAvUFh3ZjN1U3ZFOHRucllqQjduWktEcDJFSVJJPTE4MT4NCltpbWFnZToNClR3aXR0ZXJd
+DQo8aHR0cHM6Ly8zemYxd3A0NS5yLmV1LWNlbnRyYWwtMS5hd3N0cmFjay5tZS9MMC9odHRwczol
+MkYlMkZ0d2l0dGVyLmNvbSUyRmJvbHRhcHAvMS8wMTA3MDE5MzMwMWZkZjQzLTQ0NjNmYmU5LWRl
+MWUtNDNkNy1hMGY4LTViYmRhYTM4ZmI5MS0wMDAwMDAvSFlocl9VRjZVZ29yYnVReXhiNlVEWFly
+SXlzPTE4MT4NCg==
+--00000000000046f1860626f94e99
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=
+=3D"gmail_attr">---------- Forwarded message ---------<br>=E5=8F=91=E4=BB=
+=B6=E4=BA=BA=EF=BC=9A <strong class=3D"gmail_sendername" dir=3D"auto">Bolt =
+Thailand</strong> <span dir=3D"auto">&lt;<a href=3D"mailto:bangkok@bolt.eu"=
+>bangkok@bolt.eu</a>&gt;</span><br>Date: 2024=E5=B9=B411=E6=9C=8815=E6=97=
+=A5=E5=91=A8=E4=BA=94 21:00<br>Subject: Your Bolt trip on Friday<br>To: Li =
+&lt;<a href=3D"mailto:0xja.eth@gmail.com">0xja.eth@gmail.com</a>&gt;<br></d=
+iv><br><br><div class=3D"msg-6590659428851343004"><u></u>
+
+
+
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+
+
+<div id=3D"m_-6590659428851343004body">
+    <div style=3D"display:none;max-height:0px;overflow:hidden">
+        Thanks for choosing Bolt =E2=80=94 here&#39;s your ride receipt!
+        =C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C
+        =C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C
+        =C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C
+        =C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C
+        =C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C
+        =C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C
+        =C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C
+        =C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C
+        =C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C
+        =C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C
+        =C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0
+        =C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=20
+    </div>
+    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" =
+id=3D"m_-6590659428851343004bodyTable">
+        <tbody><tr>
+            <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"wid=
+th:100%;max-width:100%;min-width:100%">
+
+               =20
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" id=3D"m_-6590659428851343004headerWrapper" bgcolor=3D"#249E64" =
+style=3D"background-color:#249e64">
+                    <tbody><tr>
+                        <td align=3D"center" valign=3D"top">
+                            <table border=3D"0" cellpadding=3D"16" cellspac=
+ing=3D"0" width=3D"602" id=3D"m_-6590659428851343004headerContainer">
+                                <tbody><tr>
+                                    <td align=3D"center" valign=3D"top" cla=
+ss=3D"m_-6590659428851343004spacing-outer m_-6590659428851343004container-b=
+order-top">
+
+                                       =20
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%" id=3D"m_-6590659428851343004headerConte=
+nt">
+                                            <tbody><tr>
+                                                <td align=3D"center" valign=
+=3D"top">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"m_-659065942885134300=
+4headerContentLogo" style=3D"max-width:100%;min-width:100%">
+                                                        <tbody><tr>
+                                                            <td align=3D"le=
+ft">
+                                                                <img src=3D=
+"https://static.bolt.eu/email/images/46-image-554.png" border=3D"0" width=
+=3D"56" height=3D"32" alt=3D"Bolt" class=3D"m_-6590659428851343004bodySmall=
+ m_-6590659428851343004color-contentPrimaryInverted m_-6590659428851343004i=
+mg" id=3D"m_-6590659428851343004imgLogo">
+                                                            </td>
+                                                            <td align=3D"ri=
+ght">
+
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"m_-659065=
+9428851343004headerContentHeading">
+                                                                    <tbody>=
+<tr>
+                                                                        <td=
+ align=3D"right">
+                                                                           =
+ <span class=3D"m_-6590659428851343004caption m_-6590659428851343004color-c=
+ontentPrimaryInverted">Total:
+                                                                           =
+ </span>
+                                                                           =
+ <span class=3D"m_-6590659428851343004captionBold m_-6590659428851343004col=
+or-contentPrimaryInverted">=E0=B8=BF55.00</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+ align=3D"right">
+                                                                           =
+ <span class=3D"m_-6590659428851343004caption m_-6590659428851343004color-c=
+ontentPrimaryInverted">Friday, 15 November 2024</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </tbody></t=
+able>
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=3D"m_=
+-6590659428851343004height-40" colspan=3D"2"></td>
+                                                        </tr>
+                                                    </tbody></table>
+
+                                                   =20
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"m_-659065942885134300=
+4headerContentHeading">
+                                                        <tbody><tr>
+                                                            <td align=3D"le=
+ft" valign=3D"top" class=3D"m_-6590659428851343004spacing-bottom-16">
+                                                                <h1 class=
+=3D"m_-6590659428851343004headingLarge m_-6590659428851343004color-contentP=
+rimaryInverted m_-6590659428851343004mp0">
+                                                                    Thanks =
+for riding with us, Li</h1>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align=3D"le=
+ft" valign=3D"top">
+                                                                <span class=
+=3D"m_-6590659428851343004bodyLarge m_-6590659428851343004color-contentPrim=
+aryInverted">We hope you enjoyed your ride</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                       =20
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody></table>
+               =20
+
+               =20
+                <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border-=
+width:0;width:100%;max-width:100%;min-width:100%">
+                    <tbody>
+                        <tr>
+                            <td valign=3D"top">
+                                <table cellpadding=3D"1" cellspacing=3D"0" =
+style=3D"border-width:0;width:100%;max-width:100%;min-width:100%">
+                                    <tbody><tr>
+                                        <td valign=3D"top" style=3D"padding=
+:0">
+                                            <div style=3D"height:56px;backg=
+round-color:#249e64">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                            <td align=3D"center" valign=3D"top" width=3D"60=
+0px" class=3D"m_-6590659428851343004container-border" style=3D"width:600px"=
+ height=3D"112">
+
+                               =20
+                                <table cellpadding=3D"0" cellspacing=3D"0" =
+width=3D"600px" style=3D"width:100%;box-sizing:border-box">
+                                    <tbody>
+                                        <tr>
+                                            <td width=3D"600" valign=3D"top=
+" align=3D"right">
+                                                <div style=3D"height:56px;b=
+ackground-color:#249e64">
+                                                     <img src=3D"https://st=
+atic.bolt.eu/email/images/46-image-539.png" height=3D"112" alt=3D"Car" clas=
+s=3D"m_-6590659428851343004spacing-car-image">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                               =20
+                            </td>
+                            <td valign=3D"top">
+                                <table cellpadding=3D"1" cellspacing=3D"0" =
+style=3D"border-width:0;width:100%;max-width:100%;min-width:100%">
+                                    <tbody><tr>
+                                        <td valign=3D"top" style=3D"padding=
+:0">
+                                            <div style=3D"height:56px;backg=
+round-color:#249e64">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+               =20
+
+               =20
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" id=3D"m_-6590659428851343004bodyWrapper" bgcolor=3D"#FFFFFF" st=
+yle=3D"background-color:#ffffff">
+                    <tbody><tr>
+                        <td align=3D"center" valign=3D"top">
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"602" id=3D"m_-6590659428851343004bodyContainer" class=3D"=
+m_-6590659428851343004container-border-bottom">
+
+                                <tbody><tr>
+                                    <td align=3D"center" valign=3D"top">
+
+                                       =20
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tbody><tr>
+                                                <td class=3D"m_-65906594288=
+51343004spacing-outer-sides" style=3D"padding-top:24px;padding-bottom:24px"=
+>
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tbody><tr>
+                                                           =20
+                                                           =20
+                                                        </tr>
+                                                        <tr>
+                                                           =20
+                                                           =20
+                                                        </tr>
+                                                        <tr>
+                                                           =20
+                                                           =20
+                                                        </tr>
+                                                        <tr>
+                                                           =20
+                                                           =20
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                       =20
+
+                                       =20
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tbody><tr>
+                                                <td class=3D"m_-65906594288=
+51343004spacing-outer-sides">
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tbody><tr>
+                                                            <td class=3D"m_=
+-6590659428851343004spacing-bottom-16-sm m_-6590659428851343004spacing-top-=
+8-sm">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse:collapse">
+                                                                    <tbody>=
+<tr>
+                                                                        <td=
+ class=3D"m_-6590659428851343004heading m_-6590659428851343004color-content=
+Primary">
+                                                                           =
+ <span>Total</span>
+                                                                        </t=
+d>
+                                                                        <td=
+ align=3D"right" class=3D"m_-6590659428851343004heading m_-6590659428851343=
+004color-contentPrimary">
+                                                                           =
+ <span>=E0=B8=BF55.00</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </tbody></t=
+able>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                       =20
+
+                                       =20
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tbody><tr>
+                                                <td class=3D"m_-65906594288=
+51343004spacing-outer-sides" style=3D"padding-top:16px;padding-bottom:0px">
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tbody><tr>
+                                                            <td class=3D"m_=
+-6590659428851343004spacing-bottom-16">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse:collapse">
+                                                                    <tbody>=
+<tr>
+                                                                        <td=
+ class=3D"m_-6590659428851343004bodyLarge m_-6590659428851343004color-conte=
+ntPrimary">
+                                                                           =
+ <span>Fare</span>
+                                                                        </t=
+d>
+                                                                        <td=
+ align=3D"right" class=3D"m_-6590659428851343004bodyLarge m_-65906594288513=
+43004color-contentPrimary">
+                                                                           =
+ <span>=E0=B8=BF55.00</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+ class=3D"m_-6590659428851343004bodySmall m_-6590659428851343004color-conte=
+ntSecondary m_-6590659428851343004comment-spacing">
+                                                                           =
+ <span></span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </tbody></t=
+able>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                       =20
+
+                                       =20
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%">
+                                            <tbody><tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"100%" class=3D"m_-6590659428851343004spacing-outer-sides"=
+ style=3D"padding-top:0px;padding-bottom:0px">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"m_-659065942885134300=
+4elementDivider2" height=3D"1" style=3D"height:1px">
+                                                        <tbody><tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" bgcolor=3D"#F0F2F5" width=3D"100%" style=3D"background=
+-color:#f0f2f5;height:1px"></td>
+                                                        </tr>
+                                                    </tbody></table>
+
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                       =20
+
+                                       =20
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tbody><tr>
+                                                <td class=3D"m_-65906594288=
+51343004spacing-outer-sides" style=3D"padding-top:16px;padding-bottom:0px">
+
+
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tbody><tr>
+                                                            <td>
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse:collapse">
+                                                                    <tbody>=
+<tr>
+                                                                        <td=
+ class=3D"m_-6590659428851343004bodyLarge m_-6590659428851343004color-conte=
+ntPrimary">
+                                                                           =
+ <span>Total</span>
+                                                                        </t=
+d>
+                                                                        <td=
+ align=3D"right" class=3D"m_-6590659428851343004bodyLarge m_-65906594288513=
+43004color-contentPrimary">
+                                                                           =
+ <span>=E0=B8=BF55.00</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </tbody></t=
+able>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                       =20
+
+                                       =20
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%">
+                                            <tbody><tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"100%" class=3D"m_-6590659428851343004spacing-outer-sides"=
+ style=3D"padding-top:0px;padding-bottom:0px">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"m_-659065942885134300=
+4elementDivider6" height=3D"1" style=3D"height:1px">
+                                                        <tbody><tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" bgcolor=3D"#F0F2F5" width=3D"100%" style=3D"background=
+-color:#f0f2f5;height:1px"></td>
+                                                        </tr>
+                                                    </tbody></table>
+
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                       =20
+
+                                       =20
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tbody><tr>
+                                                <td class=3D"m_-65906594288=
+51343004spacing-outer-sides" style=3D"padding-top:24px">
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tbody><tr>
+                                                            <td class=3D"m_=
+-6590659428851343004spacing-bottom-16">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse:collapse">
+                                                                    <tbody>=
+<tr>
+                                                                        <td=
+ class=3D"m_-6590659428851343004bodyLargeBold m_-6590659428851343004color-c=
+ontentPrimary">
+                                                                           =
+ <span>Total charged</span>
+                                                                        </t=
+d>
+                                                                        <td=
+ align=3D"right" class=3D"m_-6590659428851343004bodyLargeBold m_-6590659428=
+851343004color-contentPrimary">
+                                                                           =
+ <span>=E0=B8=BF55.00</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </tbody></t=
+able>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tbody><tr>
+                                                            <td class=3D"m_=
+-6590659428851343004spacing-bottom-16">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse:collapse">
+                                                                        <tb=
+ody><tr>
+                                                                           =
+ <td align=3D"left" valign=3D"middle" width=3D"32">
+                                                                           =
+     <img src=3D"https://static.bolt.eu/payment/icons/visa.png" border=3D"0=
+" width=3D"24" height=3D"24" alt=3D"PaymentIcon" class=3D"m_-65906594288513=
+43004bodySmall m_-6590659428851343004color-contentSecondary m_-659065942885=
+1343004img" id=3D"m_-6590659428851343004imgPayment">
+                                                                           =
+ </td>
+                                                                           =
+ <td align=3D"left" class=3D"m_-6590659428851343004bodyLarge">
+                                                                           =
+     <span>=E2=80=A2=E2=80=A2=E2=80=A2=E2=80=A2 3300</span>
+                                                                           =
+ </td>
+                                                                           =
+ <td align=3D"right" class=3D"m_-6590659428851343004bodyLarge">
+                                                                           =
+     <span>=E0=B8=BF55.00</span>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                </tbody></t=
+able>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                   =20
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tbody><tr>
+                                                            <td height=3D"2=
+2px;" style=3D"height:22px"></td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                   =20
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                       =20
+
+                                       =20
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tbody><tr>
+                                                <td class=3D"m_-65906594288=
+51343004spacing-outer-sides" style=3D"padding-top:0px;padding-bottom:0px">
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tbody><tr>
+                                                            <td class=3D"m_=
+-6590659428851343004spacing-bottom-24">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse:collapse">
+                                                                    <tbody>=
+<tr>
+                                                                        <td=
+>
+                                                                           =
+ <span class=3D"m_-6590659428851343004bodySmall m_-6590659428851343004color=
+-contentPrimary"></span>
+                                                                           =
+ <span><a class=3D"m_-6590659428851343004link"><span class=3D"m_-6590659428=
+851343004bodySmall m_-6590659428851343004color-linkPrimary"></span></a></sp=
+an>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </tbody></t=
+able>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                       =20
+
+                                       =20
+                                       =20
+                                       =20
+
+                                       =20
+                                       =20
+                                        <table width=3D"100%" bgcolor=3D"#F=
+FF8D6" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;background:#fff8d6">
+                                            <tbody><tr>
+                                                <td class=3D"m_-65906594288=
+51343004spacing-outer-safety-banner">
+                                                    <a style=3D"text-decora=
+tion:none">
+                                                        <table width=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-collaps=
+e:collapse">
+                                                            <tbody><tr>
+                                                                <td>
+                                                                    <table =
+width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder-collapse:collapse">
+                                                                        <tb=
+ody><tr>
+                                                                           =
+ <td style=3D"padding:0 80px 16px 0">
+                                                                           =
+     <span class=3D"m_-6590659428851343004heading m_-6590659428851343004col=
+or-contentPrimary" style=3D"word-break:normal">Your safety is our priority<=
+/span>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                        <tr=
+>
+                                                                           =
+ <td class=3D"m_-6590659428851343004spacing-bottom-40-sm m_-659065942885134=
+3004banner-spacing" style=3D"padding-right:80px">
+                                                                           =
+     <span class=3D"m_-6590659428851343004bodyLarge m_-6590659428851343004c=
+olor-contentPrimary">We=E2=80=99re committed to improving your ride experie=
+nce and are always looking for ways to ensure you=E2=80=99re as safe as pos=
+sible while riding with us.</span>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                        <tr=
+>
+                                                                           =
+ <td style=3D"padding:40px 0 0 0" class=3D"m_-6590659428851343004spacing-bo=
+ttom-40-sm m_-6590659428851343004banner-spacing">
+                                                                           =
+     <span>
+                                                                           =
+         <a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2=
+F%2Fblog.bolt.eu%2Fen%2Fbolt-safety%2F%3Futm_source=3Dreceipt_email%26utm_m=
+edium=3Dsafety_block%26utm_campaign=3Drider_receipt/1/01070193301fdf43-4463=
+fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/x5LHg7aHlOdFQ-ReqsqJeCkW1Yw=3D181" =
+class=3D"m_-6590659428851343004link" target=3D"_blank">
+                                                                           =
+             <span class=3D"m_-6590659428851343004bodyLargeBold m_-65906594=
+28851343004color-linkPrimary">
+                                                                           =
+                 Learn more
+                                                                           =
+                 =E2=86=92
+                                                                           =
+             </span>
+                                                                           =
+         </a>
+                                                                           =
+     </span>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                    </tbody=
+></table>
+                                                                </td>
+                                                                <td>
+                                                                    <img sr=
+c=3D"https://static.bolt.eu/email/images/46-image-549.png">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                       =20
+                                       =20
+
+
+                                       =20
+                                        <table width=3D"100%" height=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-collaps=
+e:collapse">
+                                            <tbody><tr>
+                                                <td class=3D"m_-65906594288=
+51343004spacing-outer-32">
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-collapse:co=
+llapse">
+                                                        <tbody><tr>
+                                                            <td class=3D"m_=
+-6590659428851343004heading m_-6590659428851343004spacing-bottom-4 m_-65906=
+59428851343004color-contentPrimary">
+                                                                <span>Ride =
+details</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=3D"m_=
+-6590659428851343004bodySmall m_-6590659428851343004color-contentSecondary =
+m_-6590659428851343004spacing-bottom-16">
+                                                                <span>Frida=
+y, 15 November 2024</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+
+                                                   =20
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                        <tbody><tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" width=3D"100%" style=3D"padding-bottom:16px">
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                                    <tbody>=
+<tr>
+                                                                        <td=
+><img src=3D"https://staticmaps.live.boltsvc.net/mapImage/get?token=3DeyJhb=
+GciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImltYWdlX3dpZHRoIjo1MTgsImltYWd=
+lX2hlaWdodCI6MjU5LCJwaWNrdXBfbWFya2VyIjp7Imljb24iOiJodHRwczovL2ltYWdlcy5ib2=
+x0LmV1L2ludm9pY2luZy9lbWFpbF9tYXBfc3RhcnRfcG9pbnQucG5nIiwibG9jYXRpb24iOnsib=
+GF0IjoxMy43MzYyMjEsImxuZyI6MTAwLjU3MjM5OH19LCJkcm9wb2ZmX21hcmtlciI6eyJpY29u=
+IjoiaHR0cHM6Ly9pbWFnZXMuYm9sdC5ldS9pbnZvaWNpbmcvZW1haWxfbWFwX2ZpbmlzaF9wb2l=
+udC5wbmciLCJsb2NhdGlvbiI6eyJsYXQiOjEzLjcyMjM5NSwibG5nIjoxMDAuNTU5NjQyfX0sIm=
+JyYW5kIjoiYm9sdCJ9LCJpYXQiOjE3MzE2NzkyMTUsImV4cCI6MTc5NDc1MTIxNX0.pIDqZVgfH=
+FaB-BC2tmjV9iOQB4HU6Jtd9jtHSADBOkE" width=3D"100%">
+                                                                    </td></=
+tr>
+                                                                </tbody></t=
+able>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                   =20
+
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-collapse:co=
+llapse">
+                                                        <tbody><tr>
+                                                            <td class=3D"m_=
+-6590659428851343004routePoints" valign=3D"top" style=3D"background:url(htt=
+ps://static.bolt.eu/email/images/46-image-578.png) top -6px left no-repeat;=
+background-size:24px;width:24px">
+                                                            </td>
+                                                            <td valign=3D"c=
+enter" class=3D"m_-6590659428851343004bodyLarge m_-6590659428851343004color=
+-contentPrimary m_-6590659428851343004routePoints-text">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse:collapse">
+                                                                    <tbody>=
+<tr>
+                                                                        <td=
+ class=3D"m_-6590659428851343004bodySmall m_-6590659428851343004spacing-bot=
+tom-4 m_-6590659428851343004color-contentSecondary">
+                                                                           =
+ <span>Pickup:</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+ class=3D"m_-6590659428851343004color-contentPrimary">
+                                                                           =
+ <span>36/25 =E0=B8=8B=E0=B8=AD=E0=B8=A2 =E0=B8=9E=E0=B8=A3=E0=B9=89=E0=B8=
+=AD=E0=B8=A1=E0=B8=A1=E0=B8=B4=E0=B8=95=E0=B8=A3, Krung Thep Maha Nakhon 10=
+110</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </tbody></t=
+able>
+                                                            </td>
+                                                            <td valign=3D"b=
+ottom" align=3D"right" class=3D"m_-6590659428851343004bodyLarge m_-65906594=
+28851343004color-contentSecondary" style=3D"width:48px;padding:0 16px 17px =
+16px">
+                                                                <span style=
+=3D"word-break:keep-all">20:33</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=3D"m_=
+-6590659428851343004routePoints" valign=3D"top" style=3D"background:url(htt=
+ps://static.bolt.eu/email/images/46-image-576.png) bottom 12px left no-repe=
+at;background-size:24px;padding-bottom:24px;width:24px">
+                                                            </td>
+                                                            <td valign=3D"c=
+enter" class=3D"m_-6590659428851343004bodyLarge m_-6590659428851343004color=
+-contentPrimary m_-6590659428851343004routePoints-text">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse:collapse">
+                                                                    <tbody>=
+<tr>
+                                                                        <td=
+ class=3D"m_-6590659428851343004bodySmall m_-6590659428851343004spacing-bot=
+tom-4 m_-6590659428851343004color-contentSecondary">
+                                                                           =
+ <span>Dropoff:</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+ class=3D"m_-6590659428851343004color-contentPrimary">
+                                                                           =
+ <span>Queen Sirikit National Convention Centre, Klong Toei Khwaeng, Khlong=
+ Toei</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </tbody></t=
+able>
+
+                                                            </td>
+                                                            <td valign=3D"b=
+ottom" class=3D"m_-6590659428851343004bodyLarge m_-6590659428851343004color=
+-contentSecondary" align=3D"right" style=3D"width:48px;padding:0 16px 17px =
+16px">
+                                                                <span style=
+=3D"word-break:keep-all">20:44</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                   =20
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                        <tbody><tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" width=3D"100%" style=3D"padding-bottom:16px">
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"m_-659065=
+9428851343004elementDivider4" height=3D"1" style=3D"height:1px">
+                                                                    <tbody>=
+<tr>
+                                                                        <td=
+ align=3D"center" valign=3D"top" bgcolor=3D"#F0F2F5" width=3D"100%" style=
+=3D"background-color:#f0f2f5;height:1px">
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </tbody></t=
+able>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                   =20
+
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tbody><tr class=3D=
+"m_-6590659428851343004spacing-bottom-16">
+                                                            <td rowspan=3D"=
+2" width=3D"56" class=3D"m_-6590659428851343004spacing-bottom-16">
+                                                                <img width=
+=3D"40" height=3D"40" src=3D"https://static.bolt.eu/email/images/46-image-2=
+40625.png" alt=3D"Driver photo" style=3D"display:block">
+                                                            </td>
+                                                            <td class=3D"m_=
+-6590659428851343004bodySmall m_-6590659428851343004spacing-bottom-4 m_-659=
+0659428851343004color-contentSecondary">
+                                                                <span>Your =
+driver</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=3D"m_=
+-6590659428851343004spacing-bottom-16">
+                                                                <span class=
+=3D"m_-6590659428851343004bodyLarge m_-6590659428851343004color-contentPrim=
+ary">=E0=B8=A8=E0=B8=B1=E0=B8=81=E0=B8=94=E0=B8=B4=E0=B9=8C=E0=B8=94=E0=B8=
+=B2 =E0=B9=81=E0=B8=81=E0=B8=A1=E0=B8=81=E0=B8=A5=E0=B9=89=E0=B8=B2</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+
+                                                   =20
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                        <tbody><tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" width=3D"100%" style=3D"padding-bottom:16px">
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"m_-659065=
+9428851343004elementDivider4" height=3D"1" style=3D"height:1px">
+                                                                    <tbody>=
+<tr>
+                                                                        <td=
+ align=3D"center" valign=3D"top" bgcolor=3D"#F0F2F5" width=3D"100%" style=
+=3D"background-color:#f0f2f5;height:1px">
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </tbody></t=
+able>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                   =20
+
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tbody><tr>
+                                                            <td class=3D"m_=
+-6590659428851343004bodySmall m_-6590659428851343004spacing-bottom-40-sm m_=
+-6590659428851343004color-contentSecondary">
+                                                                <span>00:11=
+:34</span>
+                                                                =E2=80=A2
+                                                                <span>4 km<=
+/span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                       =20
+
+                                       =20
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" style=3D"border-collapse:collapse;borde=
+r-spacing:0;word-break:break-word">
+                                            <tbody><tr>
+                                                <td style=3D"padding-left:1=
+6px;padding-right:16px">
+                                                    <table width=3D"100%" b=
+gcolor=3D"#E3FDED" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"border-collapse:collapse;border-radius:8px;border-spacing:0;word-break:=
+break-word;background-color:#249e64">
+                                                        <tbody><tr>
+                                                            <td class=3D"m_=
+-6590659428851343004spacing-outer-24" style=3D"padding-top:24px;padding-bot=
+tom:0px;padding-right:24px;padding-left:24px">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse:collapse;border-spacing:0;word-break:break-word">
+                                                                    <tbody>=
+<tr>
+                                                                        <td=
+ style=3D"padding-bottom:16px">
+                                                                           =
+ <span class=3D"m_-6590659428851343004heading m_-6590659428851343004color-c=
+ontentPrimaryInverted" style=3D"color:#ffffff;font-size:28px;font-weight:bo=
+ld;line-height:36px;font-family:&#39;Euclid Circular B&#39;,Arial,Avenir,He=
+lvetica,Verdana,sans-serif;font-style:normal">
+                                                                           =
+     Sharing is caring
+                                                                           =
+ </span>
+                                                                        </t=
+d>
+                                                                        <td=
+ style=3D"padding-bottom:16px;float:right" class=3D"m_-6590659428851343004g=
+iveGetImg">
+                                                                           =
+ <a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Finvi=
+te.bolt.eu%2F1SJS36/1/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91=
+-000000/dHW1foJr7kc6-bb_BRGE8raBoLM=3D181" class=3D"m_-6590659428851343004l=
+ink" style=3D"text-decoration:none!important" target=3D"_blank"><img src=3D=
+"https://static.bolt.eu/email/images/46-image-546.png" border=3D"0" width=
+=3D"24" height=3D"24" alt=3D"Info" class=3D"m_-6590659428851343004bodySmall=
+ m_-6590659428851343004color-contentPrimaryInverted m_-6590659428851343004i=
+mg" style=3D"border-width:0;outline-style:none;text-decoration:none;color:#=
+ffffff;font-size:14px;font-weight:normal;line-height:20px;font-family:&#39;=
+Euclid Circular B&#39;,Arial,Avenir,Helvetica,Verdana,sans-serif;font-style=
+:normal;display:block"></a>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+>
+                                                                           =
+ <span class=3D"m_-6590659428851343004bodyLarge m_-6590659428851343004color=
+-contentPrimaryInverted" style=3D"color:#ffffff;font-size:18px;font-weight:=
+normal;line-height:24px;font-family:&#39;Euclid Circular B&#39;,Arial,Aveni=
+r,Helvetica,Verdana,sans-serif;font-style:normal">
+                                                                           =
+     Let your friends experience fast, affordable rides with Bolt!
+                                                                           =
+ </span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+ align=3D"left" valign=3D"center">
+                                                                           =
+ <table bgcolor=3D"#FFFFFF" cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder-collapse:collapse;border-radius:4px;background-color:#ffffff;backgroun=
+d-image:none;background-repeat:repeat;background-position:top left;border-s=
+pacing:0;word-break:break-word;width:unset;margin-bottom:24px;margin-top:16=
+px">
+                                                                           =
+     <tbody><tr>
+                                                                           =
+         <td align=3D"middle" valign=3D"bottom" style=3D"padding-top:8px;pa=
+dding-bottom:8px;padding-left:24px;padding-right:24px">
+                                                                           =
+             <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"border-collapse:collapse;text-align:center;border-spacing:0;word-break:=
+break-word">
+                                                                           =
+                 <tbody><tr>
+                                                                           =
+                     <td class=3D"m_-6590659428851343004caption m_-65906594=
+28851343004color-contentSecondary" style=3D"color:#818391;font-size:12px;fo=
+nt-weight:normal;line-height:16px;font-family:&#39;Euclid Circular B&#39;,A=
+rial,Avenir,Helvetica,Verdana,sans-serif;font-style:normal">
+                                                                           =
+                         <span>Your code</span>
+                                                                           =
+                     </td>
+                                                                           =
+                 </tr>
+                                                                           =
+                 <tr>
+                                                                           =
+                     <td class=3D"m_-6590659428851343004bodyLargeBold m_-65=
+90659428851343004color-contentPrimary" style=3D"color:#2f313f;font-size:18p=
+x;font-weight:bold;line-height:24px;font-family:&#39;Euclid Circular B&#39;=
+,Arial,Avenir,Helvetica,Verdana,sans-serif;font-style:normal">
+                                                                           =
+                         <span>1SJS36</span>
+                                                                           =
+                     </td>
+                                                                           =
+                 </tr>
+                                                                           =
+             </tbody></table>
+                                                                           =
+         </td>
+                                                                           =
+     </tr>
+                                                                           =
+ </tbody></table>
+                                                                        </t=
+d>
+                                                                        <td=
+ align=3D"right" valign=3D"bottom" style=3D"padding-bottom:24px" class=3D"m=
+_-6590659428851343004giveGetImg">
+                                                                           =
+ <img src=3D"https://static.bolt.eu/email/images/46-image-548.png" border=
+=3D"0" alt=3D"GiveGet" class=3D"m_-6590659428851343004bodySmall m_-65906594=
+28851343004color-contentPrimaryInverted m_-6590659428851343004img" style=3D=
+"border-width:0;outline-style:none;text-decoration:none;color:#ffffff;font-=
+size:14px;font-weight:normal;line-height:20px;font-family:&#39;Euclid Circu=
+lar B&#39;,Arial,Avenir,Helvetica,Verdana,sans-serif;font-style:normal;disp=
+lay:block">
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                            </tbody></table=
+></td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+
+                               =20
+
+                               =20
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tbody><tr>
+                                                <td height=3D"24px;" style=
+=3D"height:24px"></td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                               =20
+
+
+                               =20
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tbody><tr>
+                                                <td height=3D"24px;" style=
+=3D"height:24px"></td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                               =20
+
+
+                               =20
+
+                               =20
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                            <table width=3D"100%" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                <tbody><tr>
+                                                    <td class=3D"m_-6590659=
+428851343004spacing-outer-sides" style=3D"padding-bottom:0px">
+                                                        <table width=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                            <tbody><tr>
+                                                                <td style=
+=3D"padding-top:16px;padding-bottom:16px">
+                                                                    <table =
+width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder-collapse:collapse">
+                                                                        <tb=
+ody><tr>
+                                                                           =
+ <td class=3D"m_-6590659428851343004bodyMedium m_-6590659428851343004color-=
+linkPrimary">
+                                                                           =
+     <span><a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:=
+%2F%2Finvoice.taxify.eu%2F%3Fs=3D90b4859d-c995-4437-ac2c-66f9e8000870/1/010=
+70193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/24SuxZXU5XR0FZst3=
+Ok4w43mE8k=3D181" target=3D"_blank">Download PDF invoice</a></span>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                    </tbody=
+></table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+                                    </td>
+                                </tr>
+                               =20
+
+
+
+                               =20
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%">
+                                            <tbody><tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"100%" class=3D"m_-6590659428851343004spacing-outer-sides"=
+ style=3D"padding-top:0px;padding-bottom:0px">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"m_-659065942885134300=
+4elementDivider5" height=3D"1" style=3D"height:1px">
+                                                        <tbody><tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" bgcolor=3D"#F0F2F5" width=3D"100%" style=3D"background=
+-color:#f0f2f5;height:1px"></td>
+                                                        </tr>
+                                                    </tbody></table>
+
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                               =20
+
+                               =20
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%">
+                                            <tbody><tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"100%" class=3D"m_-6590659428851343004spacing-outer-sides"=
+ style=3D"padding-top:0px;padding-bottom:0px">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"m_-659065942885134300=
+4elementDivider5" height=3D"1" style=3D"height:1px">
+                                                        <tbody><tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" bgcolor=3D"#F0F2F5" width=3D"100%" style=3D"background=
+-color:#f0f2f5;height:1px"></td>
+                                                        </tr>
+                                                    </tbody></table>
+
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                               =20
+
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <a href=3D"https://3zf1wp45.r.eu-ce=
+ntral-1.awstrack.me/L0/https:%2F%2Fbolt.onelink.me%2FsbJ2%2Fce134c74/1/0107=
+0193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/KkdU4M3qjLwP_EdrRV=
+WpyAWEKLI=3D181" style=3D"text-decoration:none" target=3D"_blank">
+                                            <table width=3D"100%" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                <tbody><tr>
+                                                    <td class=3D"m_-6590659=
+428851343004spacing-outer-sides" style=3D"padding-top:0px;padding-bottom:24=
+px">
+                                                        <table width=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                            <tbody><tr>
+                                                                <td style=
+=3D"padding-top:16px;padding-bottom:16px">
+                                                                    <table =
+width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder-collapse:collapse">
+                                                                        <tb=
+ody><tr>
+                                                                           =
+ <td class=3D"m_-6590659428851343004bodyMedium m_-6590659428851343004color-=
+linkPrimary">
+                                                                           =
+     <span>Contact support</span>
+                                                                           =
+ </td>
+                                                                           =
+ <td align=3D"right" class=3D"m_-6590659428851343004bodyLarge m_-6590659428=
+851343004color-contentPrimary">
+                                                                           =
+     <img src=3D"https://static.bolt.eu/email/images/46-image-572.png" bord=
+er=3D"0" width=3D"24" height=3D"24" alt=3D"Support" class=3D"m_-65906594288=
+51343004bodySmall m_-6590659428851343004color-contentSecondary m_-659065942=
+8851343004img" id=3D"m_-6590659428851343004imgSupport">
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                    </tbody=
+></table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+                                        </a>
+                                    </td>
+                                </tr>
+                               =20
+
+                               =20
+
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tbody><tr class=3D"m_-65906594=
+28851343004spacing-outer-32">
+                                                <td class=3D"m_-65906594288=
+51343004bodySmall m_-6590659428851343004spacing-bottom-40-sm m_-65906594288=
+51343004color-contentSecondary m_-6590659428851343004spacing-outer-sides">
+                                                    <span>
+                                                        This is an automate=
+d email. If you need help, please
+                                                        <a href=3D"https://=
+3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Fbolt.onelink.me%2FsbJ2%2=
+Fce134c74/2/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/fE=
+9Xg6M-Cee07q6BOaiFJkFSdAM=3D181" style=3D"text-decoration:none;font-size:14=
+px" class=3D"m_-6590659428851343004color-linkPrimary" target=3D"_blank">con=
+tact support here</a>
+                                                        instead of replying=
+ to this email.
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                       =20
+
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody></table>
+               =20
+
+               =20
+
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" id=3D"m_-6590659428851343004footerWrapper" bgcolor=3D"#FFFFFF" =
+style=3D"background-color:#ffffff">
+                    <tbody><tr>
+                        <td align=3D"center" valign=3D"top">
+                            <table border=3D"0" cellspacing=3D"0" width=3D"=
+600" id=3D"m_-6590659428851343004footerContainer">
+                                <tbody><tr>
+                                    <td align=3D"center" valign=3D"top" cla=
+ss=3D"m_-6590659428851343004spacing-outer m_-6590659428851343004spacing-bot=
+tom-40-sm">
+
+                                       =20
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%" id=3D"m_-6590659428851343004footerConte=
+nt">
+                                            <tbody><tr>
+                                                <td align=3D"center" valign=
+=3D"top">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"m_-659065942885134=
+3004bodySmall m_-6590659428851343004color-contentTertiary">
+                                                        <tbody><tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top">
+                                                                <span>
+                                                                    =E0=B8=
+=A8=E0=B8=B1=E0=B8=81=E0=B8=94=E0=B8=B4=E0=B9=8C=E0=B8=94=E0=B8=B2 =E0=B9=
+=81=E0=B8=81=E0=B8=A1=E0=B8=81=E0=B8=A5=E0=B9=89=E0=B8=B2</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" id=3D"m_-6590659428851343004footerWrapper" bgcolor=3D"#FFFFFF" =
+style=3D"background-color:#ffffff">
+                    <tbody><tr>
+                        <td align=3D"center" valign=3D"top">
+                            <table border=3D"0" class=3D"m_-659065942885134=
+3004spacing-outer" cellspacing=3D"0" width=3D"600" id=3D"m_-659065942885134=
+3004footerContainer">
+                                <tbody><tr>
+                                    <td align=3D"center" valign=3D"top" cla=
+ss=3D"m_-6590659428851343004spacing-bottom-24">
+
+                                       =20
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%" id=3D"m_-6590659428851343004footerConte=
+nt">
+                                            <tbody><tr>
+                                                <td align=3D"center" valign=
+=3D"top">
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"m_-659065942885134300=
+4footerContentCaption">
+                                                        <tbody><tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" class=3D"m_-6590659428851343004spacing-bottom-8">
+                                                                <span class=
+=3D"m_-6590659428851343004bodySmall m_-6590659428851343004color-contentSeco=
+ndary">
+                                                                    Made wi=
+th
+                                                                    =F0=9F=
+=92=9A
+                                                                    in Esto=
+nia</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"m_-659065942885134300=
+4footerContentSocial">
+                                                        <tbody><tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"middle">
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"initial">
+                                                                    <tbody>=
+<tr>
+                                                                        <td=
+ align=3D"center" valign=3D"middle" width=3D"40">
+                                                                           =
+ <a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Fwww.=
+facebook.com%2Fbolt/1/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91=
+-000000/2Cgl_U_oQkEhlT6UsiSwYJOhgac=3D181" class=3D"m_-6590659428851343004l=
+ink" target=3D"_blank"><img src=3D"https://static.bolt.eu/email/images/46-i=
+mage-573.png" width=3D"24" height=3D"24" alt=3D"Facebook" class=3D"m_-65906=
+59428851343004bodySmall m_-6590659428851343004color-contentSecondary m_-659=
+0659428851343004img-social-link"></a>
+                                                                        </t=
+d>
+
+                                                                        <td=
+ align=3D"center" valign=3D"middle" width=3D"40">
+                                                                           =
+ <a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Fwww.=
+instagram.com%2Fbolt/1/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb9=
+1-000000/PXwf3uSvE8tnrYjB7nZKDp2EIRI=3D181" class=3D"m_-6590659428851343004=
+link" target=3D"_blank"><img src=3D"https://static.bolt.eu/email/images/46-=
+image-574.png" width=3D"24" height=3D"24" alt=3D"Instagram" class=3D"m_-659=
+0659428851343004bodySmall m_-6590659428851343004color-contentSecondary m_-6=
+590659428851343004img-social-link"></a>
+                                                                        </t=
+d>
+
+                                                                        <td=
+ align=3D"center" valign=3D"middle" width=3D"40">
+                                                                           =
+ <a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Ftwit=
+ter.com%2Fboltapp/1/01070193301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-0=
+00000/HYhr_UF6UgorbuQyxb6UDXYrIys=3D181" class=3D"m_-6590659428851343004lin=
+k" target=3D"_blank"><img src=3D"https://static.bolt.eu/email/images/46-ima=
+ge-575.png" width=3D"24" height=3D"24" alt=3D"Twitter" class=3D"m_-65906594=
+28851343004bodySmall m_-6590659428851343004color-contentSecondary m_-659065=
+9428851343004img-social-link"></a>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </tbody></t=
+able>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                       =20
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody></table>
+               =20
+
+            </td>
+        </tr>
+    </tbody></table>
+    <div style=3D"display:none">
+     =20
+    </div>
+    <img src=3D"https://node.bolt.eu/email-internal/pixel?id=3D8f9ce700bc4f=
+425850fc532c155ace7f4cb524f62a29cdbe478cb7176748605a841a4f37b310.gif" style=
+=3D"width:1px;height:1px">
+<img alt=3D"" src=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/I0/0107019=
+3301fdf43-4463fbe9-de1e-43d7-a0f8-5bbdaa38fb91-000000/T6qLEYtFJGoZhPclz4k3A=
+R616_g=3D181" style=3D"display:none;width:1px;height:1px">
+</div>
+
+
+</div></div></div>
+
+--00000000000046f1860626f94e99--
