@@ -3,11 +3,11 @@ pragma solidity ^0.8.0;
 
 library DateTimeUtils {
 
-  function getTimestamp(string memory date, string memory time, uint timeZone) public pure returns (uint256) {
+  function getTimestamp(string memory date, string memory time, int256 timeZone) public pure returns (uint256) {
     (uint256 day, uint256 month, uint256 year) = parseDate(date);
     (uint256 hour, uint256 minute) = parseTime(time);
     uint256 daysSinceEpoch = daysFromDate(year, month, day);
-    return (daysSinceEpoch * 86400) + (hour * 3600) + (minute * 60) - (timeZone * 1 hours);
+    return uint256(int256((daysSinceEpoch * 86400) + (hour * 3600) + (minute * 60)) - (timeZone * 1 hours));
   }
 
   function parseDate(string memory date) internal pure returns (uint256 day, uint256 month, uint256 year) {

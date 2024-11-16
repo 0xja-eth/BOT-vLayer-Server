@@ -20,14 +20,14 @@ contract EmailProver is Prover, Ownable {
 
     string public targetDomain = "^.*?bangkok@bolt.eu.*?$";
 
-    struct ProvedEmail {
-        Proof proof;
-        string toEmail;
-        string date;
-        string pickupTime;
-        string dropoffTime;
-    }
-    ProvedEmail[] public provedEmails;
+//    struct ProvedEmail {
+//        Proof proof;
+//        string toEmail;
+//        string date;
+//        string pickupTime;
+//        string dropoffTime;
+//    }
+//    ProvedEmail[] public provedEmails;
 
     constructor() Ownable(msg.sender) { }
 
@@ -37,7 +37,7 @@ contract EmailProver is Prover, Ownable {
 
     function main(UnverifiedEmail calldata unverifiedEmail,
         string memory to, string memory date, string memory pickupTime, string memory dropoffTime
-    ) public view returns (Proof memory, address, string memory, string memory, string memory) {
+    ) public view returns (Proof memory, string memory, string memory, string memory, string memory) {
         VerifiedEmail memory email = unverifiedEmail.verify();
 
 //        require(email.from.matches(targetDomain), "Email not from the bolt");
@@ -50,10 +50,10 @@ contract EmailProver is Prover, Ownable {
         require(captures[3].equal(pickupTime), "Pickup time not match");
         require(captures[4].equal(dropoffTime), "Dropoff time not match");
 
-        ProvedEmail memory pEmail = ProvedEmail(proof(), email.to, date, pickupTime, dropoffTime);
-        provedEmails.push(pEmail);
+//        ProvedEmail memory pEmail = ProvedEmail(proof(), email.to, date, pickupTime, dropoffTime);
+//        provedEmails.push(pEmail);
 
-        return (pEmail.proof, pEmail.to, pEmail.date, pEmail.pickupTime, pEmail.dropoffTime);
+        return (proof(), email.to, date, pickupTime, dropoffTime);
     }
 }
 

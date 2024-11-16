@@ -41,7 +41,7 @@ contract EmailProofVerifier is Verifier {
     }
 
     function verify(Proof calldata, string memory toEmail,
-        string memory date, string memory pickupTime, string memory dropoffTime) public view
+        string memory date, string memory pickupTime, string memory dropoffTime) public
     onlyVerified(prover, EmailProver.main.selector) {
         address toAddress = IBOTPlatform(botPlatform).emails(toEmail);
         bytes memory tripId = IBOTPlatform(botPlatform).currentTrips(toAddress);
