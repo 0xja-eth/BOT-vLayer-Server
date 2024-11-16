@@ -3,7 +3,7 @@
     "seal": {
       "verifierSelector": "0xdeafbeef",
       "seal": [
-        "0xc571d6f993ee646871d1fc4d23ce7a1f463091c38cc32ec09417fb9b7e02c22c",
+        "0x5cc8c712a1a64045d2d40d5d407a82da20203af64df0f3e844cfa95e27c09ab0",
         "0x0000000000000000000000000000000000000000000000000000000000000000",
         "0x0000000000000000000000000000000000000000000000000000000000000000",
         "0x0000000000000000000000000000000000000000000000000000000000000000",
@@ -19,8 +19,8 @@
     "callAssumptions": {
       "functionSelector": "0xeea5a2e0",
       "proverContractAddress": "0x759f00caff8faf2d81d15e6c6fc403ce90e01583",
-      "settleBlockNumber": 19765668,
-      "settleBlockHash": "0x7514a81c9abb88d5f4427bbc423ea0e5d57fd9facfe475fefc201f7ee56375cf"
+      "settleBlockNumber": 19766508,
+      "settleBlockHash": "0x15a766941912b9970dcfff38ad6395c0ce53e9f2c9f6f3f2938f25f2f014aea2"
     }
   },
   "^.*?0xja.eth@gmail.com.*?$",

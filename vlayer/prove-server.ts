@@ -1,6 +1,8 @@
 import express, { Request, Response } from 'express';
 import fs from 'fs';
 import multer from 'multer';
+import cors from "cors";
+import morgan from "morgan";
 import { createVlayerClient, preverifyEmail } from '@vlayer/sdk';
 import { getConfig, createContext } from '@vlayer/sdk/config';
 import proverSpec from '../out/EmailProver.sol/EmailProver';
@@ -11,6 +13,8 @@ const app = express();
 const PORT = 3001;
 
 // Enable JSON body parsing
+app.use(morgan("dev"));
+app.use(cors());
 app.use(express.json());
 
 // Set up multer for file uploads (temporary storage in the 'uploads' folder)
@@ -22,8 +26,23 @@ const verifier = process.env.VERIFIER_ADDRESS;
 
 console.log({ prover, verifier });
 
+function removeSecondDKIMSignature(emailContent: string): string {
+  // Regular expression to match the DKIM-Signature block
+  const dkimRegex = /DKIM-Signature:[\s\S]*?(?=\n[A-Za-z])/g;
+
+  // Find all occurrences of DKIM-Signature
+  const matches = emailContent.match(dkimRegex);
+
+  if (matches && matches.length > 1) {
+    // Remove the second DKIM-Signature
+    emailContent = emailContent.replace(matches[1], "");
+  }
+
+  return emailContent;
+}
+
 // Route to handle generating proof from EML file upload
-app.post('/api/generate-proof/:email', upload.single('emlFile'), async (req: Request, res: Response) => {
+app.post('/generate-proof/:email', upload.single('emlFile'), async (req: Request, res: Response) => {
   try {
     // Check if the file was uploaded
     if (!req.file) {
@@ -33,7 +52,11 @@ app.post('/api/generate-proof/:email', upload.single('emlFile'), async (req: Req
     const { email } = req.params;
 
     // Read the content of the uploaded EML file
-    const emlContent = fs.readFileSync(req.file.path, 'utf-8');
+    let emlContent = fs.readFileSync(req.file.path, 'utf-8');
+
+    // Delete the second DKIN-Signature in the email
+    // Delete the Content-Type: multipart/alternative; boundary="000000000000b1b1b305c0b3b3b3" in the email after "To"
+    emlContent = removeSecondDKIMSignature(emlContent);
 
     // Pre-verify the email content
     const unverifiedEmail = await preverifyEmail(emlContent);
@@ -103,7 +126,7 @@ app.post('/api/generate-proof/:email', upload.single('emlFile'), async (req: Req
     });
   } catch (error) {
     console.error('Server error:', error);
-    res.status(500).send('Server error');
+    res.status(500).send('Server error: ' + JSON.stringify(error));
   }
 });
 

@@ -35,7 +35,7 @@
     
     try {
       const email = "0xja.eth@gmail.com"
-      const response = await fetch('http://localhost:3001/api/generate-proof/' + encodeURIComponent(email), {
+      const response = await fetch('http://localhost:3000/api/vlayer/generate-proof/' + encodeURIComponent(email), {
         method: 'POST',
         body: formData,
       });
