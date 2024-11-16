@@ -28,7 +28,7 @@ console.log({ prover, verifier });
 
 function removeSecondDKIMSignature(emailContent: string): string {
   // Regular expression to match the DKIM-Signature block
-  const dkimRegex = /DKIM-Signature:[\s\S]*?(?=\n[A-Za-z])/g;
+  const dkimRegex = /DKIM-Signature:[\s\S]*?(?=\n[A-Za-z])\n/g;
 
   // Find all occurrences of DKIM-Signature
   const matches = emailContent.match(dkimRegex);
