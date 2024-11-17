@@ -10,7 +10,7 @@ import verifierSpec from '../out/EmailProofVerifier.sol/EmailProofVerifier';
 
 // Configure Express application
 const app = express();
-const PORT = 3001;
+const PORT = 3002;
 
 // Enable JSON body parsing
 app.use(morgan("dev"));
